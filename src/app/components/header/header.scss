@@ -1,0 +1,30 @@
+@import '../../scss/_color.scss';
+.header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: $primary;
+    gap: 42px;
+    img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .items{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row ;
+        align-items: center;
+        // transform: rotate(-90deg);
+        li{
+            flex-direction: row;
+        }
+
+    }
+}
