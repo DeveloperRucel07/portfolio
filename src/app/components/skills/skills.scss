@@ -1,0 +1,10 @@
+.skills{
+    flex: 0 0 100vw;                   /* each section takes full viewport width */
+    height: 100vh;
+    scroll-snap-align: start;          /* snap each section to start of viewport */
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    font-size: 2rem;
+}

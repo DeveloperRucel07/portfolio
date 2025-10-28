@@ -1,0 +1,12 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+.socials{
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    @include displayFlex($ai:center, $jc:center, $fd:row);
+    gap: 20px;
+    li{
+        list-style: none;
+    }
+}
