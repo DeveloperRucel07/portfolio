@@ -1,29 +1,58 @@
-@import '../../scss/_color.scss';
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
 .header{
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100px;
+    width: 120px;
     height: 100vh;
     background-color: $primary;
-    gap: 42px;
+    gap: 12px;
+    padding: 20px 10px;
+    box-shadow: $shadow;
     img{
         width: 80px;
         height: 80px;
     }
 
     .items{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row ;
-        align-items: center;
-        // transform: rotate(-90deg);
+        @include displayFlex($ai:center, $jc:center, $fd:column);
+        width: 100%;
+        padding: auto 0;
+        gap: 10px;
+        height: 100dvh;
         li{
-            flex-direction: row;
+            @include displayFlex($ai:center, $jc:center, $fd:column);
+            flex-direction: row-reverse;
+            text-decoration: none;
+            list-style: none;
+            width: 100%;
+            height: auto;
+            padding: 15px 0;
+            a{
+                padding: 25px 0;
+                text-decoration: none;
+                color: $secondary;
+                font-weight: 500;
+                font-size: 24px;
+                transform: rotate(-90deg);
+                transition: color 150ms ease, transform 150ms ease;
+                flex-wrap: nowrap;
+           }
+
+            &:hover {
+                color: darken($secondary, 56%);
+            }
+
+            &.active {
+                color: $primary_light;
+                font-weight: 700;
+            }
+
         }
 
     }

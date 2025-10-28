@@ -1,4 +1,4 @@
-@import './app/scss/_color.scss';
+@import './scss/_color.scss';
 @font-face {
   font-display: swap; 
   font-family: 'Quantico';
@@ -25,4 +25,7 @@
 
 body{
     position: relative;
+    max-width: 1920px;
+    background-color: $bg_color;
+    color: $secondary;
 }
