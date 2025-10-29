@@ -25,7 +25,29 @@
 
 body{
     position: relative;
-    max-width: 1920px;
+    // max-width: 1920px;
     background-color: $bg_color;
     color: $secondary;
+    height: 100vh;
+    width: max-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0;
+  height: 0;
+  display: none !important;
+}
+
+::-webkit-scrollbar-track {
+    width: 0;
+    height: 0;
 }

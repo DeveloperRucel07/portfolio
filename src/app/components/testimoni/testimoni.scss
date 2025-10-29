@@ -1,7 +1,8 @@
 .testimoni{
-    flex: 0 0 100vw;                   /* each section takes full viewport width */
+    flex: 0 0 100vw;
+    width: 100vw; 
     height: 100vh;
-    scroll-snap-align: start;          /* snap each section to start of viewport */
+    scroll-snap-align: start;
     display: grid;
     place-items: center;
     box-sizing: border-box;

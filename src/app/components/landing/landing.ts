@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Button } from "../button/button";
 
 @Component({
   selector: 'app-landing',
-  imports: [],
+  imports: [Button],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
 })

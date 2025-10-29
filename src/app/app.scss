@@ -5,10 +5,32 @@
 
 .content{
     width: calc(100% - (120px + 100px));
-    margin-left: 130px;
-    margin-right: 100px;
+    // margin-left: 130px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    height: 100vh;
 }
 
+::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0;
+  height: 0;
+  display: none !important;
+}
+
+::-webkit-scrollbar-track {
+    width: 0;
+    height: 0;
+}
+  
 footer{
     width: 100px;
 }

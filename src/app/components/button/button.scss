@@ -1,0 +1,17 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+button{
+    background-color: transparent;
+    border: unset;
+    cursor: pointer;
+    
+    img{
+        width: 150px;
+        height: 70px;
+        transition: all 0.3s ease;
+        &:hover{
+            box-shadow: 10px 10px 25px 2px rgba(179, 255, 0, 0.7);
+        }
+    }
+
+}
