@@ -1,9 +1,6 @@
 @import '../../../scss/_color.scss';
 @import '../../../scss/_mixins.scss';
 .footer{
-    position: absolute;
-    right: 0;
-    top: 0;
     background-color: $primary;
     height: 100vh;
     width: 100px;

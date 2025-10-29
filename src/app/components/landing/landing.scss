@@ -1,11 +1,45 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+
 .landing{
-    flex: 0 0 100vw; 
-    width: 100vw;                
-    height: 100vh;
-    scroll-snap-align: start;
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-    padding: 2rem;
+    position: relative;
+    @include displayFlex($ai:center, $jc:center, $fd:column);
     font-size: 2rem;
+    height: 100%;
+
+    .next-section{
+        position: absolute;
+        top: 150px;
+        right: 50px;
+    }
+
+    .contain{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .function{
+            position: absolute;
+            bottom: 15%;
+            @include displayFlex($ai:center, $jc:center, $fd:column);
+            color: $primary;
+            text-align: end;
+        }
+
+        .image-landing{
+            @include displayFlex($ai:center, $jc:center, $fd:column);
+            img{
+                bottom: 0;
+                width: 900px;
+                object-fit: cover;
+            }
+        }
+
+        
+    }
 }
+
+
+
+

@@ -1,11 +1,95 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+
 .about-me{
-    flex: 0 0 100vw;
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-    padding: 2rem;
+    position: relative;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     font-size: 2rem;
+    height: 100%;
+
+    .title{
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        color: $primary;
+        font-weight: 700;
+        font-size: 3rem;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+    }
+
+    .about-me-content{
+        position: absolute;
+        @include displayFlex($ai:center, $jc:start, $fd:column);
+        color: $white;
+        left: 100px;
+        top: 40px;
+        h4{
+            color: $primary;
+            font-size: 3rem;
+        }
+
+        p{
+            margin-bottom: 30px;
+        }
+
+        .i-am{
+            h4{
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+            .icons{
+                @include displayFlex($ai:center, $jc:start, $fd:row);
+                gap: 10px;
+                p{
+                    width: calc(100%/5);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1rem !important;
+                    img{
+                        width: 40px;
+                        height: 50px;
+                    }
+                }
+            }
+
+            .link{
+                position: absolute;
+                right: 15%;
+            }
+
+            a{
+                width: calc(100%/5);
+                height: 100%;
+                text-decoration: none;
+                color: $secondary;
+                border-radius: 30px;
+                background-color: $primary;
+                padding: 10px;
+
+                &:hover{
+                    background-color: $primary_light;
+                }
+            }
+            
+        }
+
+    }
+
+    .next-section{
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+    }
+
 }

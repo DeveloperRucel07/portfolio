@@ -10,10 +10,12 @@
     bottom: 0;
     width: 120px;
     height: 100vh;
+    max-height: 1200px;
     background-color: $primary;
     gap: 12px;
     padding: 20px 10px;
     box-shadow: $shadow;
+    z-index: 1000;
     img{
         width: 80px;
         height: 80px;

@@ -1,3 +1,6 @@
+@import '../scss/_mixins.scss';
+@import '../scss/_color.scss';
+
 .header{
     width: 170px;
     height: 100vh;
@@ -5,14 +8,23 @@
 
 .content{
     width: calc(100% - (120px + 100px));
-    // margin-left: 130px;
-    display: flex;
+    margin-left: 120px;
+    @include displayFlex($ai:center, $jc:center, $fd:row);
     flex-wrap: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
     height: 100vh;
+    max-height: 1200px;
+    >*{
+        @include displayFlex($ai:center, $jc:center, $fd:column);
+        width: 100vw;                
+        height: 100vh;
+        max-height: 1200px;
+        // position: absolute;
+    }
 }
+
 
 ::-webkit-scrollbar {
   height: 0px;
