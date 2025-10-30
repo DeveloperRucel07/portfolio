@@ -1,11 +1,41 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+
 .projects{
-    flex: 0 0 100vw;
-    height: 100vh;
-    max-height: 1200px;
-    scroll-snap-align: start;
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-    padding: 2rem;
+    position: relative;
+    margin-left: 150px;
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     font-size: 2rem;
+    height: 100%;
+
+    .title{
+        position: absolute;
+        margin-left: 30px;
+        z-index: 1;
+        top: 50%;
+        left: -40px;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        color: $primary;
+        font-weight: 700;
+        font-size: 2.5rem;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+    }
+
+    .project-list{
+        @include displayFlex($ai:center, $jc:center,$fd:row);
+    }
+
+
+    .next-section{
+        position: absolute;
+        bottom: 10px;
+        right: 5%;
+    }
 }

@@ -1,11 +1,67 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+
 .skills{
-    flex: 0 0 100vw;
-    width: 100vw; 
-    height: 100vh;
-    scroll-snap-align: start;
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-    padding: 2rem;
+    position: relative;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     font-size: 2rem;
+    height: 100%;
+
+    .title{
+        position: absolute;
+        bottom: 0;
+        left: -40px;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        color: $primary;
+        font-weight: 700;
+        font-size: 2.5rem;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+    }
+
+    .skills-content{
+        position: absolute;
+        @include displayFlex($ai:center, $jc:start, $fd:column);
+        color: $white;
+        left: 100px;
+        bottom: 0;
+
+        p{
+            margin-bottom: 30px;
+        }
+
+        .technologies{
+            @include displayFlex($ai:center, $jc:start, $fd:row);
+            flex-wrap: wrap;
+            gap: 10px;
+            p{
+                width: calc(100%/7);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem !important;
+                gap: 8px;
+                text-align: center;
+                img{
+                    width: 40px;
+                    height: 50px;
+                }
+            }
+            
+        }
+    }
+
+    .next-section{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
 }

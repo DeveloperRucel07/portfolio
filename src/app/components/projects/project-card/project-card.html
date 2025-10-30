@@ -1,0 +1,45 @@
+
+<div class="project-card">
+    <div class="title">
+     <span>{{index()}}</span>   {{projectName()}}
+    </div>
+    <div class='project-detail'>
+        <div class="detail-text">
+            <li class="about">
+                About the project
+                <p>
+                    {{aboutProject()}}
+                </p>
+
+            </li>
+            <li class="used-techno">
+                Technologies i have used
+                <p>
+                    @for(techno of usedTechno(); track techno){
+                        {{techno}},
+                    }
+                </p>
+
+            </li>
+            <li>
+                What i have learned
+                <p>
+                    @for(skill of earnedSkills(); track skill){
+                        {{skill}},
+                    }
+                </p>
+            
+            </li>
+        </div>
+        <div class="project-image">
+            <div class="vor-image">
+                <img [src]="projectImage()" alt="join Project">
+            </div>
+            <div class="project-link">
+                <a [href]="githubLink()" target="_blank" class="github">GitHub</a>
+                <a [href]="projectLink()" target="_blank" >Live Test</a>
+            </div>
+        </div>
+    </div>
+    
+</div>

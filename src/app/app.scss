@@ -8,7 +8,6 @@
 
 .content{
     width: calc(100% - (120px + 100px));
-    margin-left: 120px;
     @include displayFlex($ai:center, $jc:center, $fd:row);
     flex-wrap: nowrap;
     overflow-x: hidden;

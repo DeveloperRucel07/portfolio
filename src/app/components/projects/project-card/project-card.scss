@@ -1,0 +1,109 @@
+@import '../../../../scss/_color.scss';
+@import '../../../../scss/_mixins.scss';
+
+.project-card{
+    position: relative;
+    margin-left: 100px;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: $bg_color_secondary;
+    border-radius: 50px;
+    color: $white;
+
+    width: 90vw;
+    max-width: 1200px;
+
+}
+
+.title{
+    span{
+        color: transparent;
+        line-height: 1;
+        -webkit-text-stroke: 1px $primary;
+        font-weight: 700;
+        width: 60px;
+        height: 120px;
+        font-size: 100px;
+        font-weight: bold;
+    }
+}
+
+.project-image{
+    position: absolute;
+    right: 10%;
+    top: 50px;
+    @include displayFlex();
+    .project-link{
+
+        @include displayFlex($fd:row);
+        gap: 20px;
+
+        a{
+            width: 130px;
+            height: 100%;
+            text-decoration: none;
+            color: $secondary;
+            border-radius: 30px;
+            background-color: $primary;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            &:hover{
+                background-color: $secondary;
+                color: white;
+            }
+        }
+
+        .github{
+            background-color: transparent;
+            border: $primary 1px solid;
+            color: $primary;
+            &:hover{
+                color: white;
+                border: none;
+            }
+        }
+                
+    }
+
+}
+
+
+
+.detail-text{
+    margin-left: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .about{
+        max-width: 50%;
+    }
+
+    li{
+        position: relative;
+        margin: 1.5em 0;
+        padding-left: 70px;
+        font-size: 1.2rem;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 20px;
+            transform: translateY(-50%);
+            font-size: 32px;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 1.5px $primary;
+            border: 2px solid $primary;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
+}
