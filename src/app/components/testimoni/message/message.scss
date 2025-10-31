@@ -1,0 +1,43 @@
+@import '../../../../scss/_color.scss';
+@import '../../../../scss/_mixins.scss';
+
+.message{
+    height: 185px;
+    width: 500px;
+    border-radius: 30px;
+    border: 1px solid $primary_light;
+    padding: 15px;
+    @include displayFlex($fd:row);
+
+    .separator{
+        width: 1px;
+        height: 100%;
+        border: 1px solid $primary_light;
+    }
+
+    .content{
+        width: 55%;
+        height: 100%;
+        font-size: 18px;
+        color: $white;
+        @include displayFlex($fd:row);
+        align-items: center;
+    }
+
+    .devName{
+        @include displayFlex($fd:column);
+        align-items: center;
+        width: 45%;
+        height: 100%;
+        h3{
+            font-size: 32px;
+            color: $primary;
+        }
+
+        p{
+            font-size: 18px;
+            color: $primary_light;
+        }
+
+    }
+}

@@ -3,6 +3,6 @@
 .footer{
     background-color: $primary;
     height: 100vh;
-    @include displayFlex($ai:center, $jc:start, $fd:column);
+    @include displayFlex($jc:start, $fd:column);
 
 }

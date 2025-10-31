@@ -8,13 +8,13 @@
 
 .content{
     width: calc(100% - (120px + 100px));
-    @include displayFlex($ai:center, $jc:center, $fd:row);
+    @include displayFlex($jc:center, $fd:row);
     flex-wrap: nowrap;
     scroll-behavior: smooth;
     height: 100vh;
     max-height: 1200px;
     >*{
-        @include displayFlex($ai:center, $jc:center, $fd:column);
+        @include displayFlex( $jc:center, $fd:column);
         width: 100vw;            
         height: 100vh;
         max-height: 1200px;

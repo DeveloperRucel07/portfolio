@@ -4,15 +4,16 @@
     position: fixed;
     top: 10px;
     right: 130px;
-    @include displayFlex($ai:center, $jc:center, $fd:row);
+    @include displayFlex($jc:center, $fd:row);
+    align-items: center;
     gap: 20px;
+    
     li{
         list-style: none;
     }
 
     h3{
-        @include displayFlex($ai:center, $jc:center, $fd:row);
-        margin-top: 5px;
+        @include displayFlex($jc:center, $fd:row);
         gap: 6px;
         color: $white;
         margin-left: 50px;

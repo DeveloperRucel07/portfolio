@@ -19,7 +19,7 @@
     }
 
     .project-list{
-        @include displayFlex($ai:center, $jc:center,$fd:row);
+        @include displayFlex($jc:center,$fd:row);
         
     }
 

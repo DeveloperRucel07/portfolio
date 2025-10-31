@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-message',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './message.scss',
 })
 export class Message {
+  
+  message = input<string>();
+  developerName = input<string>();
+  projectName = input<string>();
 
 }

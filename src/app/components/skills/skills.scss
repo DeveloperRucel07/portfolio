@@ -20,7 +20,7 @@
     .skills-content{
         position: absolute;
         max-width: 90%;
-        @include displayFlex($ai:center, $jc:start, $fd:column);
+        @include displayFlex($jc:start, $fd:column);
         color: $white;
         left: 100px;
         bottom: 0;
@@ -30,7 +30,7 @@
         }
 
         .technologies{
-            @include displayFlex($ai:center, $jc:start, $fd:row);
+            @include displayFlex($jc:start, $fd:row);
             flex-wrap: wrap;
             gap: 10px;
             p{

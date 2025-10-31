@@ -16,7 +16,7 @@
 }
 
 .project-title{
-    @include displayFlex($fd:row, $jc:start, $ai:center);
+    @include displayFlex($fd:row, $jc:start);
     gap: 20px;
     span{
         color: transparent;

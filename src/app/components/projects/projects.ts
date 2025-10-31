@@ -27,7 +27,7 @@ export class Projects {
       usedTechno: ['OOP', 'JavaScript', 'HTML', 'CSS'],
       earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
-      projectLink: 'https://join.rucel-tsafack.com/index.html',
+      projectLink: 'https://sharkie.rucel-tsafack.com/index.html',
       projectImage: '../../../../../icons/project_sharkie.png'
     },
 

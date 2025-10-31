@@ -15,17 +15,19 @@
     .title{
         @include title;
         bottom: 0;
-        left: -40px;
+        left: 100px;
     }
 
     .message-list{
-        @include displayFlex($ai:center, $jc:center,$fd:row);
+        @include displayFlex($jc:center,$fd:column);
+        align-items: center;
+        gap: 30px;
     }
 
 
     .next-section{
         position: absolute;
-        bottom: 10px;
+        top: 25%;
         right: 5%;
     }
 }

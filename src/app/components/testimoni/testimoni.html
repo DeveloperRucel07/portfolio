@@ -3,6 +3,14 @@
         <h2>References</h2>
     </div>
     <div class="message-list">
+        @for(testimony of testimonies; track testimony){
+            <app-message
+                [developerName]="testimony.developerName"
+                [message]="testimony.message"
+                [projectName]="testimony.projectName"
+            >
+            </app-message>
+        }
 
        
     </div>

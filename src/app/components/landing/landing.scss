@@ -3,7 +3,8 @@
 
 .landing{
     position: relative;
-    @include displayFlex($ai:center, $jc:center, $fd:column);
+    @include displayFlex($jc:center, $fd:column);
+    align-items: center;
     font-size: 2rem;
     height: 100%;
 
@@ -22,13 +23,13 @@
         .function{
             position: absolute;
             bottom: 15%;
-            @include displayFlex($ai:center, $jc:center, $fd:column);
+            @include displayFlex($jc:center, $fd:column);
             color: $primary;
             text-align: end;
         }
 
         .image-landing{
-            @include displayFlex($ai:center, $jc:center, $fd:column);
+            @include displayFlex($jc:center, $fd:column);
             img{
                 bottom: 0;
                 width: 900px;

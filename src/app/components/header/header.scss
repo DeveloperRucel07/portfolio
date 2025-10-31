@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 120px;
+    width: 120px !important;
     height: 100vh;
     max-height: 1200px;
     background-color: $primary;
@@ -22,13 +22,13 @@
     }
 
     .items{
-        @include displayFlex($ai:center, $jc:center, $fd:column);
+        @include displayFlex($jc:center, $fd:column);
         width: 100%;
         padding: auto 0;
         gap: 10px;
         height: 100dvh;
         li{
-            @include displayFlex($ai:center, $jc:center, $fd:column);
+            @include displayFlex($jc:center, $fd:column);
             flex-direction: row-reverse;
             text-decoration: none;
             list-style: none;
