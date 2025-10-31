@@ -4,3 +4,17 @@
     justify-content: $jc !important;
     flex-direction: $fd;
 }
+
+@mixin title(){
+    position: absolute;
+    margin-left: 30px;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    color: $primary;
+    font-weight: 700;
+    font-size: 2.5rem;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+}

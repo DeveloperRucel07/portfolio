@@ -25,7 +25,7 @@
 }
 
 body{
-  @include displayFlex;
+  @include displayFlex($ai:center, $jc:center);
     // position: relative;
     background-color: $bg_color;
     color: $secondary;
@@ -35,6 +35,30 @@ body{
     overflow-x: auto;
     overflow-y: hidden;
     border-bottom: 1px solid whitesmoke;
+}
+
+.main-content{
+    position: relative;
+    @include displayFlex($ai:center, $jc:center, $fd:row);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    height: 100vh;
+    max-height: 1200px;
+    >*{
+        @include displayFlex($ai:center, $jc:center, $fd:column);
+        width: 100vw;                
+        height: 100vh;
+        max-height: 1200px;
+    }
+    .footer{
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh !important;
+      width: 100px !important;
+    }
 }
 
 // ::-webkit-scrollbar {

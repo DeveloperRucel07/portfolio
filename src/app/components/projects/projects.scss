@@ -3,7 +3,7 @@
 
 .projects{
     position: relative;
-    margin-left: 150px;
+    margin-left: 380px !important;
     display: flex;
     width: max-content;
     flex-direction: row;
@@ -13,29 +13,20 @@
     height: 100%;
 
     .title{
-        position: absolute;
-        margin-left: 30px;
-        z-index: 1;
+        @include title;
         top: 50%;
         left: -40px;
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        color: $primary;
-        font-weight: 700;
-        font-size: 2.5rem;
-        transform: rotate(-90deg);
-        transform-origin: left top;
     }
 
     .project-list{
         @include displayFlex($ai:center, $jc:center,$fd:row);
+        
     }
 
 
     .next-section{
         position: absolute;
         bottom: 10px;
-        right: 5%;
+        right: -4%;
     }
 }

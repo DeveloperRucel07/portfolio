@@ -12,21 +12,14 @@
     height: 100%;
 
     .title{
-        position: absolute;
-        bottom: 0;
-        left: -40px;
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        color: $primary;
-        font-weight: 700;
-        font-size: 2.5rem;
-        transform: rotate(-90deg);
-        transform-origin: left top;
+        @include title;
+        bottom: 6%;
+            
     }
 
     .skills-content{
         position: absolute;
+        max-width: 90%;
         @include displayFlex($ai:center, $jc:start, $fd:column);
         color: $white;
         left: 100px;

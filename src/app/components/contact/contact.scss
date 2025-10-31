@@ -1,12 +1,18 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+
 .contact{
-    flex: 0 0 100vw;
-    width: 100vw; 
-    height: 100vh;
-    max-height: 1200px;
-    scroll-snap-align: start;
-    display: grid;
-    place-items: center;
-    box-sizing: border-box;
-    padding: 2rem;
+    position: relative;
+    margin-left: 2900px !important;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     font-size: 2rem;
+    height: 100%;
+
+    .title{
+        @include title;
+    }
 }
