@@ -16,6 +16,9 @@
     font-size: 2.5rem;
     transform: rotate(-90deg);
     transform-origin: left top;
+    color: transparent;
+    line-height: 1;
+    -webkit-text-stroke: 1px $primary;
 }
 
 @mixin titleMobile(){
@@ -26,6 +29,10 @@
     font-weight: 700;
     font-size: 2.5rem;
     transform: rotate(0deg);
+    color: transparent;
+    line-height: 1;
+    -webkit-text-stroke: 1px $primary;
+    padding: 50px 0;
 }
 
 

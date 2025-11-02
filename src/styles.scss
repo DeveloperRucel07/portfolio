@@ -56,34 +56,39 @@ body{
   }
 
   .main-content{
-    margin-left: 0px;
-    padding: 10px;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column !important;
-    scroll-behavior: smooth;
-    >*{
-        width: 100%;                
-    }
+      margin-left: 0px;
+      padding: 10px;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column !important;
+      scroll-behavior: smooth;
+      >*{
+          width: 100%;                
+      }
 
-    .footer{
-      width: 100% !important;
-      height: 100px !important;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
+      .footer{
+        width: 100% !important;
+        height: 100px !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
 
-    .socials-link{
-      width: 100% !important;
-      height: 100px !important;
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      right: 0;
-    }
-}
+      .socials-link{
+        width: 100% !important;
+        height: 100px !important;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+      }
+      
+  }
+
+  .next-section{
+    display: none;
+  }
   
 }
