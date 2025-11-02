@@ -18,7 +18,7 @@ export class Projects {
       earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.com/index.html',
-      projectImage: '../../../../../icons/project_join.png'
+      projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
     }, 
 
     {
@@ -28,7 +28,7 @@ export class Projects {
       earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
       projectLink: 'https://sharkie.rucel-tsafack.com/index.html',
-      projectImage: '../../../../../icons/project_sharkie.png'
+      projectImage: 'https://rucel-tsafack.com/assets_icons/project_sharkie.png'
     },
 
     {
@@ -38,7 +38,7 @@ export class Projects {
       earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.com/index.html',
-      projectImage: '../../../../../icons/project_join.png'
+      projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
     }, 
 
   ]

@@ -1,12 +1,21 @@
 <div class="header">
-    <a href="#landing"><img src="./../../../../images/RT_developer_logo_gray.png" alt=""></a>
+    <a href="#landing" (click)="closeMenu()"><img src="https://rucel-tsafack.com/images/RT_developer_logo_gray.png" alt=""></a>
+
+    <button class="burger" (click)="toggleMenu()" aria-label="Menu">
+      <span [class.open]="menuOpen"></span>
+      <span [class.open]="menuOpen"></span>
+      <span [class.open]="menuOpen"></span>
+    </button>
     
-    <div class="items">
+    <div class="items" [class.open]="menuOpen">
         <ul>
-            <li><a href="#why-me">Why me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">My Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li (click)="closeMenu()"><a href="#why-me">Why me</a></li>
+            <li (click)="closeMenu()"><a href="#skills">Skills</a></li>
+            <li (click)="closeMenu()"><a href="#work">My Work</a></li>
+            <li (click)="closeMenu()"><a href="#contact">Contact</a></li>
+            <li class="traduction">
+                <span (click)="closeMenu()">DE</span> | <span (click)="closeMenu()">EN</span>
+            </li>
         </ul>
     </div>
 </div>
