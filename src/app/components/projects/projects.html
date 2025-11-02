@@ -4,17 +4,19 @@
     </div>
     <div class="project-list">
         @for (project of projects; track project; let index = $index) {
-            <app-project-card
-                [index]="index+1"
-                [projectName]="project.projectName"
-                [aboutProject]="project.aboutProject"
-                [usedTechno]="project.usedTechno"
-                [earnedSkills]="project.earnedSkills"
-                [githubLink]="project.githubLink"
-                [projectLink]="project.projectLink"
-                [projectImage]="project.projectImage">
-            >
-            </app-project-card>
+            <div class="card-project">
+                <app-project-card
+                    [index]="index+1"
+                    [projectName]="project.projectName"
+                    [aboutProject]="project.aboutProject"
+                    [usedTechno]="project.usedTechno"
+                    [earnedSkills]="project.earnedSkills"
+                    [githubLink]="project.githubLink"
+                    [projectLink]="project.projectLink"
+                    [projectImage]="project.projectImage">
+                >
+                </app-project-card>
+            </div>
         }
        
     </div>

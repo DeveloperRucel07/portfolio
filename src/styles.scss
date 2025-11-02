@@ -25,55 +25,65 @@
 }
 
 body{
-  @include displayFlex($jc:center);
-    // position: relative;
+  @include displayFlex($jc:center, $fd:column);
     background-color: $bg_color;
     color: $secondary;
-    height: 100vh;
-    max-height: 1200px;
-    width: max-content;
-    overflow-x: auto;
-    overflow-y: hidden;
-    border-bottom: 1px solid whitesmoke;
+  
 }
 
 .main-content{
-    position: relative;
-    @include displayFlex($jc:center, $fd:row);
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+  position: relative;
+  @include displayFlex($jc:center, $fd:column);
+  margin-left: 130px;
+  gap: 20px;
+
     scroll-behavior: smooth;
-    height: 100vh;
-    max-height: 1200px;
     >*{
-        @include displayFlex($jc:center, $fd:column);
-        width: 100vw;                
-        height: 100vh;
-        max-height: 1200px;
-    }
-    .footer{
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100vh !important;
-      width: 100px !important;
+        width: 100%;                
     }
 }
 
-// ::-webkit-scrollbar {
-//   height: 0px;
-//   width: 0px;
-//     display: none;
-// }
 
-// ::-webkit-scrollbar-thumb {
-//   width: 0;
-//   height: 0;
-//   display: none !important;
-// }
 
-// ::-webkit-scrollbar-track {
-//     width: 0;
-//     height: 0;
-// }
+@media (max-width: 800px) {
+  body{
+    height: auto;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .main-content{
+    margin-left: 0px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column !important;
+    scroll-behavior: smooth;
+    >*{
+        width: 100%;                
+    }
+
+    .footer{
+      width: 100% !important;
+      height: 100px !important;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .socials-link{
+      width: 100% !important;
+      height: 100px !important;
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+    }
+}
+  
+}

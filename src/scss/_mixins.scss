@@ -17,3 +17,18 @@
     transform: rotate(-90deg);
     transform-origin: left top;
 }
+
+@mixin titleMobile(){
+    z-index: 1;
+    display: inline-block;
+    height: auto;
+    color: $primary;
+    font-weight: 700;
+    font-size: 2.5rem;
+    transform: rotate(0deg);
+}
+
+
+@mixin marginLeft($val:100px){
+    margin-left: $val;
+}

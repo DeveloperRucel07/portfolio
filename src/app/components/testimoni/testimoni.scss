@@ -3,19 +3,18 @@
 
 .testimoni{
     position: relative;
-    margin-left: 2900px !important;
     display: flex;
     width: 100vw;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
     font-size: 2rem;
-    height: 100%;
+    height: auto;
+    padding: 100px 0 50px 0;
 
     .title{
-        @include title;
-        bottom: 0;
-        left: 100px;
+        @include titleMobile();
     }
 
     .message-list{
@@ -26,7 +25,6 @@
 
 
     .next-section{
-        position: absolute;
         top: 25%;
         right: 5%;
     }

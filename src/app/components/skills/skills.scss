@@ -1,60 +1,112 @@
 @import '../../../scss/_color.scss';
 @import '../../../scss/_mixins.scss';
-
 .skills{
-    position: relative;
-    margin-left: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    font-size: 2rem;
-    height: 100%;
-
+    @include displayFlex($fd:column);
+    align-items: center;
+    width: 100%;
+    color: $white;
+    padding: 100px 0 50px 0;
     .title{
-        @include title;
-        bottom: 6%;
-            
+        @include titleMobile();
     }
-
+    
     .skills-content{
-        position: absolute;
-        max-width: 90%;
-        @include displayFlex($jc:start, $fd:column);
-        color: $white;
-        left: 100px;
-        bottom: 0;
-
-        p{
-            margin-bottom: 30px;
-        }
-
+        @include displayFlex($fd:column);
+        
         .technologies{
-            @include displayFlex($jc:start, $fd:row);
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));;
+            grid-auto-rows: auto;
+            width: 100%;
+            padding: 30px 0;
             gap: 10px;
             p{
-                width: calc(100%/7);
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                @include displayFlex($fd:column);
                 align-items: center;
-                font-size: 1rem !important;
                 gap: 8px;
+                width: 80px;
                 text-align: center;
+                margin: 0;
+                cursor: default;
+                user-select: none;
                 img{
-                    width: 40px;
+                    width: 50px;
                     height: 50px;
+                    object-fit: cover;
+                    display: block;
+                    border-radius: 8px;
+                    transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+                    transform-origin: center;
+                    will-change: transform;
+                    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+                }
+                &:hover img,
+                img:focus {
+                    animation: bounce-rotate 620ms cubic-bezier(.2,.9,.2,1) infinite;
+                    box-shadow: 0 18px 36px rgba(191,255,0,0.12), 0 2px 8px rgba(0,0,0,0.6);
                 }
             }
-            
-        }
-    }
 
-    .next-section{
-        position: absolute;
-        top: 10%;
-        right: 5%;
+        }
+
+        .motivate{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: $primary_light; 
+        }
+
+        .link{
+            @include displayFlex($fd:row);
+            width: 100%;
+            align-items: flex-end;
+            padding: 30px 0;
+            a{
+                width: 150px;
+                height: 100%;
+                text-decoration: none;
+                color: $secondary;
+                border-radius: 30px;
+                background-color: $primary;
+                padding: 10px;
+                text-align: center;
+                font-size: 18px;
+                &:hover{
+                    background-color: $secondary;
+                    color: white;
+                }
+            }
+        }
+
     }
+}
+
+@keyframes bounce-rotate {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  30% {
+    transform: translateY(-14px) rotate(120deg) scale(1.06);
+  }
+  60% {
+    transform: translateY(0) rotate(260deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  1% {
+    border-color: transparent;
+  }
 }

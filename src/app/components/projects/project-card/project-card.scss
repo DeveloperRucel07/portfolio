@@ -2,16 +2,21 @@
 @import '../../../../scss/_mixins.scss';
 
 .project-card{
-    position: relative;
-    margin-left: 80px;
-    padding: 20px;
-    margin-top: 5%;
+    @include displayFlex($fd:column, $jc:start);
+    padding: 10px;
     background-color: $bg_color_secondary;
     border-radius: 50px;
     color: $white;
     width: 90vw;
-    max-width: 1200px;
+    max-height: 1000px;
+    z-index: 2;
+    .project-detail{
+        @include displayFlex($fd:column, $jc:start);
+    }
 
+    .about{
+        width: 100% !important;
+    }
 
 }
 
@@ -36,17 +41,18 @@
 }
 
 .project-image{
-    position: absolute;
-    right: 6%;
-    top: 50px;
-    @include displayFlex();
+    @include displayFlex($jc:center);
+    align-items: center;
+    width: 100%;
     .vor-image{
         @include displayFlex($fd:row);
         margin-bottom: 20px;
+        width: 100%;
         img{
             width: 100%;
-            height: 300px;
+            max-height: 250px;
             border-radius: 36px;
+            object-fit: cover;
         }
     }
 
@@ -86,14 +92,9 @@
 
 
 .detail-text{
-    margin-left: 100px;
     list-style: none;
     padding: 0;
     margin: 0;
-
-    .about{
-        max-width: 50%;
-    }
 
     li{
         position: relative;
@@ -125,5 +126,18 @@
         }
     }
 
+
+    
+}
+
+@media (max-width: 800px) {
+    .project-detail{
+        @include displayFlex($fd:column);
+        font-size: 16px;
+
+    }
+    .about{
+        width: 100% !important;
+    }
     
 }

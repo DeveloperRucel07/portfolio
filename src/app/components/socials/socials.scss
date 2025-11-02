@@ -1,9 +1,6 @@
 @import '../../../scss/_color.scss';
 @import '../../../scss/_mixins.scss';
 .socials{
-    position: fixed;
-    top: 10px;
-    right: 130px;
     @include displayFlex($jc:center, $fd:row);
     align-items: center;
     gap: 20px;
@@ -29,3 +26,5 @@
         }
     }
 }
+
+

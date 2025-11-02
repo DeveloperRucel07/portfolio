@@ -2,30 +2,28 @@
 @import '../../../scss/_mixins.scss';
 
 .projects{
-    position: relative;
-    margin-left: 380px !important;
     display: flex;
-    width: max-content;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     font-size: 2rem;
-    height: 100%;
-
+    height: 3200px !important;
+    padding: 100px 0 50px 0;
     .title{
-        @include title;
-        top: 50%;
-        left: -40px;
+        @include titleMobile();
     }
 
     .project-list{
-        @include displayFlex($jc:center,$fd:row);
+        @include displayFlex($jc:center,$fd:column);
         
     }
 
+    .card-project{
+        margin: 20px 0;
+    }
 
     .next-section{
-        position: absolute;
         bottom: 10px;
         right: -4%;
     }
