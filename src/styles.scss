@@ -68,7 +68,7 @@ body{
 
     .footer{
       width: 100% !important;
-      height: 100px !important;
+      height: 50px !important;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -76,12 +76,10 @@ body{
     }
 
     .socials-link{
+      margin: 20px 0;
       width: 100% !important;
-      height: 100px !important;
-      position: absolute;
+      height: 50px !important;
       bottom: 40px;
-      left: 0;
-      right: 0;
     }
       
   }
@@ -94,7 +92,6 @@ body{
 
 @media (max-width: 480px) {
     .title{
-        position: absolute;
         margin-left: 10px;
         z-index: 1;
         display: inline-block;

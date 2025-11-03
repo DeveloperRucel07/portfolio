@@ -22,7 +22,7 @@
             @include displayFlex($fd:column, $jc:center);
             align-items: center;
             width: 600px;
-            height: 600px;
+            height: 550px;
             input[type=text], input[type=email]{
                 width: 100%;
                 height: 50px;
@@ -169,7 +169,6 @@
             align-items: center;
             gap: 20px;
             font-size: 18px;
-            padding: 20px 0;
             color: $white;
             h4{
                 color: $primary;
@@ -216,5 +215,47 @@
     border: $red 3px solid !important;
     &::placeholder{
         color: $red;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .contact{  
+        @include displayFlex($fd:column);
+        align-items: flex-start ;
+        width: 100vw !important;
+        padding: 20px;
+
+        .content{
+            @include displayFlex($fd:column-reverse);
+            gap: 20px;
+            width: 100%;
+            form{
+                width: 100%;
+                input[type=text], input[type=email], textarea{
+                    width: 100%;
+                    margin: 10px 0;
+                }
+
+            }
+
+            .contact-info{
+                width: 100%;
+                align-items: flex-start;
+                
+                .link{
+                    align-items: flex-start;
+                }
+            }
+        }
+
+        .up-start{
+            @include displayFlex($fd:column);
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            padding: 0px;
+            margin: 0;
+        }
     }
 }
