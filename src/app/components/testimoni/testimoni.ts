@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Button } from "../button/button";
 import { TestimoniInterface } from '../../testimoni.interface';
 import { Message } from "./message/message";
@@ -9,7 +9,8 @@ import { Message } from "./message/message";
   templateUrl: './testimoni.html',
   styleUrl: './testimoni.scss',
 })
-export class Testimoni {
+export class Testimoni implements AfterViewInit{
+  @ViewChild('messageList', {static: false}) messageList!: ElementRef<HTMLDivElement>;
 
   testimonies:TestimoniInterface[] = [
 
@@ -33,5 +34,37 @@ export class Testimoni {
 
 
   ]
+
+  activeIndex = 0;
+
+  ngAfterViewInit() {
+    const el = this.messageList?.nativeElement;
+    if(!el){
+      console.warn('messageList not yet available in ngAfterViewInit');
+      return
+    }
+    el.addEventListener('scroll', () => this.updateActiveIndex());
+  }
+
+  scrollToMessage(index: number) {
+    const container = this.messageList.nativeElement;
+    const width = container.clientWidth;
+    container.scrollTo({ left: width * index, behavior: 'smooth' });
+    this.activeIndex = index;
+  }
+
+  updateActiveIndex() {
+    const container = this.messageList.nativeElement;
+    const scrollLeft = container.scrollLeft;
+    const width = container.clientWidth;
+    const index = Math.round(scrollLeft / width);
+    this.activeIndex = index;
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateActiveIndex();
+  }
+
 
 }

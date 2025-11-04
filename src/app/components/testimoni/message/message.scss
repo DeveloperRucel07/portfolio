@@ -8,6 +8,7 @@
     border: 1px solid $primary_light;
     padding: 15px;
     @include displayFlex($fd:row);
+    align-items: center;
 
     .separator{
         width: 1px;
@@ -39,5 +40,51 @@
             color: $primary_light;
         }
 
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    .message{
+        width: 100%;
+        padding: 10px;
+        height: 250px;
+        padding:20px;
+        .content{
+            font-size: 16px;
+            padding: 10px;
+            color: $white;
+            @include displayFlex($fd:row);
+            align-items: center;
+        }
+
+        .devName{
+            h3{
+                font-size: 24px;
+            }
+
+            p{
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .message{
+        @include displayFlex($fd:column);
+        align-items: center;
+
+        .separator{
+            width: 100%;
+            height: 1px;
+            border: 1px solid $primary_light;
+        }
+
+        .content, .devName{
+            width: 100%;
+        }
     }
 }

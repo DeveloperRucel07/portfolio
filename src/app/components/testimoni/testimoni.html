@@ -1,18 +1,25 @@
 <div class="testimoni" id="testimoni">
-    <div class="title">
+    <section class="title">
         <h2>References</h2>
-    </div>
-    <div class="message-list">
+    </section>
+
+    
+    <section class="message-list" #messageList (scroll)="updateActiveIndex()">
         @for(testimony of testimonies; track testimony){
-            <app-message
+            <app-message class="message"
                 [developerName]="testimony.developerName"
                 [message]="testimony.message"
                 [projectName]="testimony.projectName"
             >
             </app-message>
         }
-
-       
-    </div>
+    </section>
+    <section class="dots-content">
+        @for(testimony of testimonies; let i= $index; track i ){
+            <button class="dot" [class.active]="i === activeIndex" (click)="scrollToMessage(i)">
+            </button>
+        }
+    </section>
+    
     <app-button class="next-section" navigateTo="#contact"> <img src="https://rucel-tsafack.com/assets_icons/arrow_right.png" alt="" srcset=""> </app-button>
 </div>

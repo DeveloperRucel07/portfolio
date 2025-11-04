@@ -23,9 +23,70 @@
         gap: 30px;
     }
 
+    .dots-content{
+        width: 100%;
+        display: none;
+    }
+
 
     .next-section{
         top: 25%;
         right: 5%;
     }
+}
+
+
+
+
+@media (max-width: 800px){
+    .testimoni{
+        padding: 30px;
+        align-items: center;
+        .message-list{
+            @include displayFlex($jc:flex-start,$fd:row);
+            align-items: center;
+            gap: 10px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            width: 100vw;
+            .message{
+                flex: 0 0 calc(100vw - 30px);
+                scroll-snap-align: start;
+                box-sizing: border-box;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+        .message-list::-webkit-scrollbar {
+            display: none;
+        }
+        .message-list {
+            scrollbar-width: none;
+        }
+    }
+
+    .dots-content{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        .dot{
+            color: $primary;
+            background-color: $primary;
+            border: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            padding:5px;
+        }
+
+        .dot.active{
+            width: 30px;
+            border-radius: 20px;
+        }
+    }
+
 }
