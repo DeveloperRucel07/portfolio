@@ -9,11 +9,10 @@ import { Testimoni } from "./components/testimoni/testimoni";
 import { Contact } from "./components/contact/contact";
 import { Socials } from "./components/socials/socials";
 import { Footer } from "./components/footer/footer";
-import { HorizontalScroll } from "../horizontal-scroll";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Landing, AboutMe, Skills, Projects, Testimoni, Contact, Socials, Footer, HorizontalScroll],
+  imports: [RouterOutlet, Header, Landing, AboutMe, Skills, Projects, Testimoni, Contact, Socials, Footer,],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

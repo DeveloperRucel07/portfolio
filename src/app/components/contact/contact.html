@@ -3,19 +3,49 @@
         <h2>Contact me</h2>
     </div>
     <div class="content" id="contact">
-        <form>
-            <input type="text" placeholder="Your Name" name="Name" >
-            <input type="email" placeholder="Your Name" name="Email">
-            <textarea name="message" placeholder="Your message"></textarea>
+        <form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
+            <input type="text" 
+            [placeholder]="showError('name') ? 'Your Name is required' : 'Your Name' " 
+                formControlName="name" 
+                [class.outline-error]="isInvalid('name')" 
+            >
+
+            <input type="email" 
+                [placeholder]="
+                    showError('email', 'required')
+                    ? 'Email is required'
+                    : showError('email', 'email')
+                    ? 'Enter a valid email address'
+                    : 'Your email'
+                "
+                formControlName="email" 
+                [class.outline-error]="isInvalid('email')" 
+            >
+
+            <textarea  
+                [placeholder]="showError('message') ? 'Your message is required' : 'Your message'"
+                formControlName="message" 
+                [class.outline-error]="isInvalid('message')" 
+            >
+            </textarea>
+
             <div class="check-policy">
                 <label class="neon-checkbox" >
-                    <input type="checkbox" >
-                    <span class="checkmark"></span>
+                    <input type="checkbox" 
+                        formControlName="agree"
+                    >
+                    <span class="checkmark" [class.outline-error]="isInvalid('agree')" ></span>
                 </label>
                 I've read the <a href="">pricacy policy </a> and agree to the processing of my data as outlined.
+                @if(showError('agree')){
+                    <p class="error">Please accept the privacy policy.</p>
+                }
+            </div>
+            <div class="sucess-message" [class.open]="submitting">
+                Thanks, your message has been sent.
             </div>
             <div class="form-btn">
-                <button class="desabled">Send</button>
+                <button type="submit" [disabled]="submitForm.invalid" [class.disabled]="submitForm.invalid" >Send</button>
             </div>
         </form>
         <div class="contact-info">

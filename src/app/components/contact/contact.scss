@@ -1,6 +1,21 @@
 @import '../../../scss/_color.scss';
 @import '../../../scss/_mixins.scss';
 
+.sucess-message{
+    width: 300px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary;
+    color: $white;
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.sucess-message.open{
+    display: flex;
+}
+
 .contact{
     position: relative;
     display: flex;
@@ -34,6 +49,7 @@
                 background-color: transparent;
                 outline: $primary;
                 border: $primary 2px solid;
+                color: $white;
                 &:focus{
                     color: $white;
                     font-size: 18px;
@@ -52,6 +68,7 @@
                 background-color: transparent;
                 outline: $primary;
                 border: $primary 2px solid;
+                color: $white;
 
                 &:focus{
                     color: $white;
@@ -208,11 +225,12 @@
 
 .error{
     color: $red;
+    font-size: 16px;
 }
 
 .outline-error{
     outline: $red !important;
-    border: $red 3px solid !important;
+    border: $red 2px solid !important;
     &::placeholder{
         color: $red;
     }
