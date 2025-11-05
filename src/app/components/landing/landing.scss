@@ -13,6 +13,10 @@
         right: 100px !important;
     }
 
+    .location{
+        display: none;
+    }
+
     .contain{
         position: relative;
         display: flex;
@@ -32,11 +36,11 @@
                 display: inline-block;
                 font-size: 2.5rem;
                 font-weight: 700;
-                border-right: 2px solid $primary_light;
                 white-space: nowrap; 
                 overflow: hidden;
                 width: 0; 
-                animation: typing 4s steps(60, end) forwards, blink 0.7s step-end infinite;
+                animation: typing 2s steps(100, end) forwards;
+                animation-delay: 0s, 2s; 
             }
         }
 
@@ -61,7 +65,7 @@
         @include displayFlex($jc:center, $fd:column);
         align-items: center;
         font-size: 2rem;
-        height: 100%;
+        height: 100vh;
         padding: 50px 0;
 
         .next-section{
@@ -70,20 +74,32 @@
             right: 100px !important;
         }
 
-        .contain{
+        .location{
+            position: absolute;
+            width: 100%;
+            font-size: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
+            bottom: 0;
+            color: $white;
+        }
+
+        .contain{
+            display: flex;
+            align-items: center;
+            justify-content: center ;
             top: 40px;
             padding: 40px 0;
             
             .function{
                 position: absolute;
+                width: 100%;
                 bottom: 15%;
-                @include displayFlex($jc:center, $fd:column);
-                align-items: center;
+                @include displayFlex($jc:center, $fd:column-reverse);
+                align-items: center !important;
+                text-align: center !important;
                 color: $primary;
-                text-align: end !important;
             }
 
             .image-landing{
@@ -92,9 +108,8 @@
                 align-items: center;
                 img{
                     width:100%;
-                    height: 75vh;
+                    height: 100%;
                     object-fit: cover;
-                    
                 }
             }
 
@@ -102,6 +117,22 @@
         }
     }
 
+}
+
+
+@media (max-width: 600px) {
+    .function{
+        h1{
+            font-size: 2.5rem;
+        }
+
+        h4{
+            width: 100%;
+            font-size: 29px !important;
+            animation: typing 2s steps(100, end) forwards;
+            animation-delay: 0s, 2s; 
+        }
+    }
 }
 
 @keyframes typing {
@@ -113,11 +144,6 @@
   }
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 
 
