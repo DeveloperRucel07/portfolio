@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, input, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -15,5 +15,12 @@ export class ProjectCard {
   githubLink = input<string>();
   projectLink = input<string>();
   projectImage = input<string>();
-  
+
+  @Output() cardClicked = new EventEmitter<number>();
+  isExpanded = input<boolean>();
+
+  onCardClick() {
+    this.cardClicked.emit(this.index());
+    console.log('Card clicked:', this.index());
+  }
 }

@@ -1,5 +1,5 @@
 
-<div class="project-card">
+<div class="project-card" [class.expanded]="isExpanded()" (click)="onCardClick()">
     <div class="project-title">
         <span class="index">{{index()}}</span> 
         <h2>{{projectName()}}</h2>

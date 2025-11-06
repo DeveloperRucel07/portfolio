@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Button } from "../button/button";
 import { ProjectCard } from "./project-card/project-card";
 import { Project } from '../../project.interface';
@@ -10,6 +10,7 @@ import { Project } from '../../project.interface';
   styleUrl: './projects.scss',
 })
 export class Projects {
+  expandedCardIndex: number  = 0;
   projects: Project[] = [
     {
       projectName: 'Project Join',
@@ -42,5 +43,14 @@ export class Projects {
     }, 
 
   ]
+
+  toggleCardExpansion(index: number) {
+    if (this.expandedCardIndex === index) {
+      this.expandedCardIndex = 0;
+    } else {
+      this.expandedCardIndex = index;
+    }
+    console.log('Toggled card expansion. Expanded card index:', this.expandedCardIndex);
+  }
 
 }
