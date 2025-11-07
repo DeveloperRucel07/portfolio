@@ -16,6 +16,7 @@
 
     .project-list{
         @include displayFlex($jc:center,$fd:column);
+        margin-left: 25px;
         
     }
 

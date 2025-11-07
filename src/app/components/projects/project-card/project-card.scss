@@ -2,13 +2,14 @@
 @import '../../../../scss/_mixins.scss';
 
 .project-card{
+    position: relative;
     @include displayFlex($fd:column, $jc:start);
     padding: 10px;
     background-color: $bg_color_secondary;
     border-radius: 50px;
     color: $white;
     width: 90vw;
-    max-height: 1000px;
+    height: 900px;
     z-index: 2;
     .project-detail{
         @include displayFlex($fd:column, $jc:start);
@@ -16,6 +17,24 @@
 
     .about{
         width: 100% !important;
+    }
+
+    .expand-indicator{
+        height: 50px;
+        width: 100%;
+        background-color: $bg_color_secondary;
+        @include displayFlex($jc:center);
+        display: none;
+        align-items: center;
+        position: absolute;
+        color: $primary;
+        bottom: 0px;
+        left: 0;
+        border-radius: 50px;
+        span{
+            font-size: 18px;
+            text-decoration: underline;
+        }
     }
 
 }
@@ -97,9 +116,9 @@
 
     li{
         position: relative;
-        margin: 1.5em 0;
+        margin: 1em 0;
         padding-left: 70px;
-        font-size: 1.5rem;
+        font-size: 20px;
         &::before{
             content: '';
             position: absolute;
@@ -130,7 +149,7 @@
 
     .project-card{
         @include displayFlex($fd:column, $jc:start);
-        padding: 20px;
+        padding: 10px;
         width: 90vw;
         overflow: hidden;
         height: 500px;
@@ -141,6 +160,41 @@
         @include displayFlex($fd:column);
         font-size: 16px;
 
+    }
+
+    .detail-text{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+            position: relative;
+            margin: 1em 0;
+            padding-left: 20px;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 20px;
+                transform: translateY(-50%);
+                font-size: 18px;
+                font-weight: 900;
+                color: transparent;
+                -webkit-text-stroke: 1.5px $primary;
+                border: 2px solid $primary;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p{
+                font-size: 16px;
+                padding: 5px;
+            }
+        }    
     }
     
     .about{
@@ -169,10 +223,48 @@
         }
     }
 
-    .expanded{
-        height: 1500px !important;
-        // overflow: visible !important;
+    
+
+    .project-link{
+        @include displayFlex($fd:row);
+        gap: 10px;
+        a{
+            width: 100px;
+            height: 100%;
+            text-decoration: none;
+            color: $secondary;
+            border-radius: 30px;
+            background-color: $primary;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+            &:hover{
+                background-color: $secondary;
+                color: white;
+            }
+        }
+
+        .github{
+            background-color: transparent;
+            border: $primary 1px solid;
+            color: $primary;
+            &:hover{
+                color: white;
+                border: none;
+            }
+        }
+                
     }
+
+    .expand-indicator{
+        display: flex !important;
+
+    }
+
+    .expanded{
+        height: 900px !important;
+    }
+
     
 }
 
@@ -217,7 +309,7 @@
 
         li{
             position: relative;
-            margin: 1.5em 0;
+            margin: 0.5em 0;
             padding-left: 20px;
             &::before{
                 content: '';
@@ -239,10 +331,45 @@
             }
 
             p{
-                font-size: 16px;
+                font-size: 18px;
                 padding: 5px;
             }
         }    
+    }
+
+
+    .project-link{
+        @include displayFlex($fd:row);
+        gap: 10px;
+        a{
+            width: 110px !important;
+            height: 100%;
+            text-decoration: none;
+            color: $secondary;
+            border-radius: 30px;
+            background-color: $primary;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+            &:hover{
+                background-color: $secondary;
+                color: white;
+            }
+        }
+
+        .github{
+            background-color: transparent;
+            border: $primary 1px solid;
+            color: $primary;
+            &:hover{
+                color: white;
+                border: none;
+            }
+        }          
+    }
+
+    .expanded{
+        height: 975px !important;
     }
     
 }
