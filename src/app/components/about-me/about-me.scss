@@ -62,3 +62,58 @@
     }
 
 }
+
+@media(min-width: 801px){
+    .about-me{
+        position: relative;
+        @include displayCenter();
+        flex-direction: column;
+        padding-left: 150px;
+        padding-right: 150px;
+        width: 100vw;
+        height: 100vh;
+        max-height: 1200px;
+        scroll-snap-align: start;
+        overflow-y: hidden;
+
+        .title{
+            @include title();
+            left: 100px;
+            top: 350px;
+        }
+
+        .about-me-content{
+            padding-left: 80px;
+            padding-right: 30px;
+            h4{
+                font-size: 40px;
+                text-align: left;
+            }
+
+            .icons{
+                gap: 30px;
+                img{
+                    width: 50px;
+                    height: 60px;
+                }
+                p{
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+
+            .link{
+                a{
+                    width: 200px;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .next-section{
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+        }
+    }
+}

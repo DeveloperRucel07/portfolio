@@ -1,2 +1,97 @@
-
+@import '../scss/_color.scss';
+@import '../scss/_mixins.scss';
   
+.main-content{
+  position: relative;
+  @include displayFlex($jc:center, $fd:column);
+  margin-left: 130px;
+  gap: 20px;
+  scroll-behavior: smooth;
+  >*{
+      width: 100%;                
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .main-content{
+    margin-left: 0px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column !important;
+    scroll-behavior: smooth;
+    >*{
+        width: 100%;                
+    }
+
+    .footer{
+      width: 100% !important;
+      height: 50px !important;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .socials-link{
+      margin: 20px 0;
+      width: 100% !important;
+      height: 50px !important;
+      bottom: 40px;
+    }
+      
+  }
+
+  .next-section{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 480px) {
+    .title{
+        margin-left: 10px;
+        z-index: 1;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        color: $primary;
+        font-weight: 700;
+        font-size: 1.5rem;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        color: transparent;
+        line-height: 1;
+        -webkit-text-stroke: 1px $primary;
+    }
+}
+
+@media(min-width: 801px){
+  .main-content{
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100vw;
+    height: 100vh;
+    max-height: 1200px;
+    >*{
+      flex: 0 0 100vw;
+      height: 100vh;
+    }
+
+    .footer{
+      background-color: $primary;
+    }
+
+  }
+
+}

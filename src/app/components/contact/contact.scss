@@ -241,6 +241,65 @@
 }
 
 
+@media(min-width: 801px){
+    .contact{
+        position: relative;
+        @include displayCenter();
+        flex-direction: row;
+        padding-left: 150px;
+        padding-right: 0;
+        width: 100vw;
+        height: 100vh;
+        max-height: 1200px;
+        scroll-snap-align: start;
+        overflow-y: hidden;
+        
+        .title{
+            position: absolute;
+            @include title();
+            top: 60%;
+            left: 100px;
+        }
+
+        form{
+            padding: 20px;
+        }
+
+        .content{
+            margin-top: 50px;
+            padding-left: 170px;
+            @include displayFlex($fd:row, $jc:space-between);
+            align-items: flex-start;
+            .contact-info{
+                margin-top: 50px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                p{
+                    text-align: end;
+                }
+                .link{
+                    align-items: flex-end;
+                    justify-content: center;
+                }
+
+            }
+        }
+
+        .up-start{
+            img{
+                content: url('https://rucel-tsafack.com/assets_icons/arrow_left.png');
+            }
+            position: absolute;
+            bottom: 35%;
+            right: 5%;
+        }
+    }
+
+}
+
+
 @media (max-width: 800px) {
     .contact{  
         @include displayFlex($fd:column);

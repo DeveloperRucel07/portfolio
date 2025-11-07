@@ -2,7 +2,19 @@
 @import '../../../scss/_mixins.scss';
 .footer{
     background-color: $primary;
-    // height: 100vh;
     @include displayFlex($jc:start, $fd:column);
 
+}
+
+@media(min-width: 801px){
+    .footer{
+        position: sticky;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100vh;
+        max-height: 1200px;
+        background-color: $primary;
+    }
 }

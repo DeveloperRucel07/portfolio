@@ -4,6 +4,12 @@
     flex-direction: $fd;
 }
 
+@mixin displayCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin title(){
     position: absolute;
     margin-left: 30px;

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ElementRef, HostListener, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
 import { Landing } from "./components/landing/landing";
@@ -18,4 +18,17 @@ import { Footer } from "./components/footer/footer";
 })
 export class App {
   protected readonly title = signal('portfolio');
+
+  @ViewChild('scrollable') scrollable!: ElementRef<HTMLDivElement>;
+
+  constructor() {}
+
+  @HostListener('wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    if (!this.scrollable?.nativeElement) return;
+    this.scrollable.nativeElement.scrollLeft += event.deltaY;
+    console.log("main content");
+    event.preventDefault();
+  }
+
 }

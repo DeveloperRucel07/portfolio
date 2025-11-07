@@ -2,7 +2,7 @@
     <div class="title">
         <h2>My Work</h2>
     </div>
-    <div class="project-list">
+    <div class="project-list" #projectList>
         @for (project of projects; track project; let i = $index) {
             <div class="card-project">
                 <app-project-card

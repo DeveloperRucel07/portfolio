@@ -107,3 +107,29 @@ body{
         -webkit-text-stroke: 1px $primary;
     }
 }
+
+@media(min-width: 801px){
+  body{
+     overflow: hidden;
+  }
+  .main-content{
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-x: scroll;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100vw;
+    height: 100vh;
+    max-height: 1200px;
+
+    .footer{
+      background-color: $primary;
+    }
+
+  }
+
+}

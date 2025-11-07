@@ -35,6 +35,33 @@
     }
 }
 
+@media(min-width: 801px){
+    .testimoni{
+        position: relative;
+        @include displayCenter();
+        flex-direction: row;
+        padding-left: 150px;
+        padding-right: 150px;
+        width: 100vw;
+        height: 100vh;
+        max-height: 1200px;
+        scroll-snap-align: start;
+        overflow-y: hidden;
+
+        .title{
+            position: absolute;
+            @include title();
+            bottom: 5%;
+            left: 60px;
+        }
+
+        .next-section{
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+    }
+}
 
 
 
@@ -96,3 +123,5 @@
         font-size: 30px !important;
     }
 }
+
+

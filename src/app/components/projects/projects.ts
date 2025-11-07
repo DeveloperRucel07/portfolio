@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, ViewChild } from '@angular/core';
 import { Button } from "../button/button";
 import { ProjectCard } from "./project-card/project-card";
 import { Project } from '../../project.interface';
@@ -51,6 +51,27 @@ export class Projects {
       this.expandedCardIndex = index;
     }
     console.log('Toggled card expansion. Expanded card index:', this.expandedCardIndex);
+  }
+
+
+  @ViewChild('projectList') scrollable!: ElementRef<HTMLDivElement>;
+
+  constructor() {}
+
+  ngAfterViewInit() {
+    if (!this.scrollable) {
+      console.error('Scrollable element not found');
+    }
+  }
+
+  @HostListener('wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    if (!this.scrollable?.nativeElement) return;
+
+    this.scrollable.nativeElement.scrollLeft += event.deltaY;
+    console.log("projects");
+    
+    event.preventDefault();
   }
 
 }
