@@ -53,25 +53,39 @@ export class Projects {
     console.log('Toggled card expansion. Expanded card index:', this.expandedCardIndex);
   }
 
-
-  @ViewChild('projectList') scrollable!: ElementRef<HTMLDivElement>;
-
+  @ViewChild('projectList', {static: false}) projectList!: ElementRef<HTMLDivElement>;
+  activeIndex = 0;
   constructor() {}
 
-  ngAfterViewInit() {
-    if (!this.scrollable) {
-      console.error('Scrollable element not found');
+    ngAfterViewInit() {
+    const el = this.projectList?.nativeElement;
+    if(!el){
+      console.warn('projectList not yet available in ngAfterViewInit');
+      return
     }
+    el.addEventListener('scroll', () => this.updateActiveIndex());
   }
 
-  @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent) {
-    if (!this.scrollable?.nativeElement) return;
-
-    this.scrollable.nativeElement.scrollLeft += event.deltaY;
-    console.log("projects");
-    
-    event.preventDefault();
+  scrollToMessage(index: number) {
+    const container = this.projectList.nativeElement;
+    const width = container.clientWidth;
+    container.scrollTo({ left: width * index, behavior: 'smooth' });
+    this.activeIndex = index;
   }
+
+  updateActiveIndex() {
+    const container = this.projectList.nativeElement;
+    const scrollLeft = container.scrollLeft;
+    const width = container.clientWidth;
+    const index = Math.round(scrollLeft / width);
+    this.activeIndex = index;
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateActiveIndex();
+  }
+
+
 
 }

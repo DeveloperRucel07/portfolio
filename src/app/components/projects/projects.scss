@@ -14,9 +14,14 @@
         @include titleMobile();
     }
 
+
     .project-list{
         @include displayFlex($jc:center,$fd:column);
         margin-left: 25px;  
+
+        .dots-content{
+            display: none !important;
+        }
     }
 
     .card-project{
@@ -57,12 +62,12 @@
 
         .project-list{
             @include displayFlex($jc:flex-start,$fd:row);
-            align-items: flex-start;
+            align-items: center;
             margin-left: 70px;
             padding-left: 50px;
             gap: 20px;
             scroll-snap-type: x mandatory;
-            overflow-x: auto; 
+            overflow-x: auto;
             z-index: 1;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
@@ -74,5 +79,52 @@
             right: 5%;
             z-index: 2;
         }
+
+    }
+
+    ::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccff00;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff4d;
+    display: none;
+  }
+}
+
+.dots-content{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    .dot{
+        color: $primary;
+        background-color: $primary;
+        border: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        padding:5px;
+    }
+
+    .dot.active{
+        width: 30px;
+        border-radius: 20px;
     }
 }

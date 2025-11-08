@@ -24,11 +24,27 @@ export class App {
   constructor() {}
 
   @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent) {
+  onWheel(event: WheelEvent) {
     if (!this.scrollable?.nativeElement) return;
-    this.scrollable.nativeElement.scrollLeft += event.deltaY;
-    console.log("main content");
+    const delta = this.normalizeWheelDelta(event);
+    const step = 7;
+    this.scrollable.nativeElement.scrollLeft += delta*step;
     event.preventDefault();
+  }
+
+
+  private normalizeWheelDelta(event: WheelEvent): number {
+    if (typeof event.deltaY === 'number') {
+      return event.deltaY;
+    }
+    const anyEv = event as any;
+    if (typeof anyEv.wheelDelta === 'number') {
+      return -anyEv.wheelDelta;
+    }
+    if (typeof anyEv.detail === 'number') {
+      return anyEv.detail;
+    }
+    return 0;
   }
 
 }

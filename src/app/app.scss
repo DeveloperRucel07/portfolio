@@ -92,6 +92,29 @@
       background-color: $primary;
     }
 
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccff00;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff4d;
+    display: none;
   }
 
 }
