@@ -16,7 +16,7 @@ export class Projects {
       projectName: 'Project Join',
       aboutProject: 'Task management inspired by Kanban System. Create and Organise Tasks using drag and drop functions. assign users and categories.',
       usedTechno: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-      earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
+      earnedSkills: ['Direct application of acquired knowledge in JavaScript, HTML, and CSS. Insight into professional teamwork with Scrum and tools like Git and Figma.' ],
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
@@ -26,20 +26,20 @@ export class Projects {
       projectName: 'Project Sharkie',
       aboutProject: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       usedTechno: ['OOP', 'JavaScript', 'HTML', 'CSS'],
-      earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
+      earnedSkills: ['Deepening my knowledge of JavaScript. Learning and applying object-oriented programming (OOP), using browser events.'],
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
       projectLink: 'https://sharkie.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_sharkie.png'
     },
 
     {
-      projectName: 'Project Join',
-      aboutProject: 'Task management inspired by Kanban System. Create and Organise Tasks using drag and drop functions. assign users and categories.',
-      usedTechno: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-      earnedSkills: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusantium, laboriosam error ratione eius soluta repellendus repellat ullam facilis? Commodi laborum illum, non rerum perspiciatis dicta recusandae in modi provident!' ],
-      githubLink: 'https://github.com/DeveloperRucel07/Join',
-      projectLink: 'https://join.rucel-tsafack.com/index.html',
-      projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
+      projectName: 'Project ShopDev',
+      aboutProject: 'A complete Ecommerce website with a functional shopping cart, wish list, and user authentication system. Payement integration usin Card and PayPal.',
+      usedTechno: ['Angular', 'Firebase', 'Tailwind CSS', 'HTML', 'SCSS'],
+      earnedSkills: [' Comprehensive understanding of Angular. Using Firebase for backend services. Implementing responsive design with Tailwind CSS.'],
+      githubLink: 'https://github.com/DeveloperRucel07/shopdev',
+      projectLink: 'https://shopdev.rucel-tsafack.com/index.html',
+      projectImage: 'https://rucel-tsafack.com/assets_icons/project_shopdev.png'
     }, 
 
   ]

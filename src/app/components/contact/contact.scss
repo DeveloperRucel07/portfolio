@@ -36,7 +36,7 @@
         form{
             @include displayFlex($fd:column, $jc:center);
             align-items: center;
-            width: 600px;
+            max-width: 600px;
             height: 550px;
             input[type=text], input[type=email]{
                 width: 100%;
@@ -241,13 +241,15 @@
 }
 
 
-@media(min-width: 801px){
+@media(min-width: 801px)  {
     .contact{
         position: relative;
-        @include displayCenter();
-        flex-direction: row;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: row !important;
         padding-left: 150px;
-        padding-right: 0;
+        padding-top: 50px;
         width: 100vw;
         height: 100vh;
         max-height: 1200px;
@@ -269,12 +271,12 @@
             margin-top: 50px;
             padding-left: 170px;
             @include displayFlex($fd:row, $jc:space-between);
-            align-items: flex-start;
+            align-items: center;
             .contact-info{
                 margin-top: 50px;
                 display: flex;
                 align-items: flex-end;
-                justify-content: flex-end;
+                justify-content: flex-start;
 
                 p{
                     text-align: end;
@@ -289,6 +291,7 @@
 
         .up-start{
             img{
+                background: transparent;
                 content: url('https://rucel-tsafack.com/assets_icons/arrow_left.png');
             }
             position: absolute;
@@ -297,7 +300,112 @@
         }
     }
 
+
+     ::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccff00;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff4d;
+    display: none;
+  }
+
 }
+
+// @media(min-width: 801px) and (max-width: 1199px) {
+//     .contact{
+//         position: relative;
+//         @include displayCenter();
+//         flex-direction: column;
+//         padding-left: 150px;
+//         padding-right: 0;
+//         width: 100vw;
+//         height: 100vh;
+//         max-height: 1200px;
+//         scroll-snap-align: start;
+//         overflow-y: hidden;
+        
+//         .title{
+//             position: absolute;
+//             @include title();
+//             top: 60%;
+//             left: 100px;
+//         }
+
+//         form{
+//             padding: 20px;
+//         }
+
+//         .content{
+//             margin-top: 50px;
+//             padding-left: 170px;
+//             @include displayFlex($fd:column, $jc:center);
+//             align-items: center !important;
+//             .contact-info{
+//                 margin-top: 50px;
+//                 display: flex;
+//                 align-items: flex-start;
+//                 justify-content: center;
+
+//                 p{
+//                     text-align: start;
+//                 }
+//                 .link{
+//                     align-items: flex-start;
+//                     justify-content: center;
+//                 }
+
+//             }
+//         }
+
+//         .up-start{
+//             img{
+//                 background: transparent;
+//                 content: url('https://rucel-tsafack.com/assets_icons/arrow_left.png');
+//             }
+//             position: absolute;
+//             bottom: 35%;
+//             right: 5%;
+//         }
+//     }
+
+
+//      ::-webkit-scrollbar {
+//     width: 10px;
+//     display: none;
+//   }
+
+//   ::-webkit-scrollbar-track {
+//     background: #222;
+//     border-radius: 10px;
+//     display: none;
+//   }
+
+//   ::-webkit-scrollbar-thumb {
+//     background: #ccff00;
+//     border-radius: 10px;
+//     display: none;
+//   }
+
+//   ::-webkit-scrollbar-thumb:hover {
+//     background: #e6ff4d;
+//     display: none;
+//   }
+
+// }
 
 
 @media (max-width: 800px) {

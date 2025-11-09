@@ -24,6 +24,15 @@ export class App {
   constructor() {}
 
   @HostListener('wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    if (!this.scrollable?.nativeElement) return;
+    const delta = this.normalizeWheelDelta(event);
+    const step = 7;
+    this.scrollable.nativeElement.scrollLeft += delta*step;
+    event.preventDefault();
+  }
+
+  @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {
     if (!this.scrollable?.nativeElement) return;
     const delta = this.normalizeWheelDelta(event);

@@ -16,8 +16,8 @@
             <li class="used-techno">
                 Technologies i have used
                 <p>
-                    @for(techno of usedTechno(); track techno){
-                        {{techno}},
+                    @for(techno of usedTechno(); track techno; let last = $last){
+                        {{techno }} @if (!last) { | }
                     }
                 </p>
 
@@ -25,8 +25,8 @@
             <li>
                 What i have learned
                 <p>
-                    @for(skill of earnedSkills(); track skill){
-                        {{skill}},
+                    @for(skill of earnedSkills(); track skill; let last = $last){
+                        {{skill}} @if (!last) { | }
                     }
                 </p>
             
