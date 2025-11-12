@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { Button } from "../button/button";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators  } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact',
-  imports: [Button, ReactiveFormsModule],
+  imports: [Button, ReactiveFormsModule, RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

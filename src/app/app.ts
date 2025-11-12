@@ -9,10 +9,11 @@ import { Testimoni } from "./components/testimoni/testimoni";
 import { Contact } from "./components/contact/contact";
 import { Socials } from "./components/socials/socials";
 import { Footer } from "./components/footer/footer";
+import { PrivacyPolicy } from "./pages/privacy-policy/privacy-policy";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Landing, AboutMe, Skills, Projects, Testimoni, Contact, Socials, Footer,],
+  imports: [RouterOutlet, Header, Landing, AboutMe, Skills, Projects, Testimoni, Contact, Socials, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -22,15 +23,6 @@ export class App {
   @ViewChild('scrollable') scrollable!: ElementRef<HTMLDivElement>;
 
   constructor() {}
-
-  @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent) {
-    if (!this.scrollable?.nativeElement) return;
-    const delta = this.normalizeWheelDelta(event);
-    const step = 7;
-    this.scrollable.nativeElement.scrollLeft += delta*step;
-    event.preventDefault();
-  }
 
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {
@@ -46,7 +38,7 @@ export class App {
     if (typeof event.deltaY === 'number') {
       return event.deltaY;
     }
-    const anyEv = event as any;
+    const anyEv = event as WheelEvent & { wheelDelta?: number; detail?: number };
     if (typeof anyEv.wheelDelta === 'number') {
       return -anyEv.wheelDelta;
     }
