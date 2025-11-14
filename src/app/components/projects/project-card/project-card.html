@@ -1,5 +1,5 @@
 
-<div class="project-card" [class.expanded]="isExpanded()" (click)="onCardClick()">
+<div class="project-card" [class.expanded]="isExpanded()">
     <div class="project-title">
         <span class="index">{{index()}}</span> 
         <h2>{{projectName()}}</h2>
@@ -43,7 +43,7 @@
         </div>
     </div>
     
-    <div class="expand-indicator">
+    <div class="expand-indicator"  (click)="onCardClick()">
         @if (isExpanded()) {
             <span>Show me less ▲</span>
         } @else {

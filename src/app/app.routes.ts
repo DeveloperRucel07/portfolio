@@ -2,11 +2,12 @@ import { Routes } from '@angular/router';
 import { LegalNotice } from './pages/legal-notice/legal-notice';
 import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
 import { App } from './app';
+import { Home } from './pages/home/home';
 
 export const routes: Routes = [
     {
         path: '',
-        component: App
+        component: Home
     },
     
     {

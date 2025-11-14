@@ -58,7 +58,7 @@
         .next-section{
             position: absolute;
             top: 10%;
-            right: 10%;
+            right: 5%;
         }
     }
 }
@@ -69,6 +69,11 @@
     .testimoni{
         padding: 30px;
         align-items: center;
+
+        .title{
+            width: 100%;
+            text-align: start !important;
+        }
         .message-list{
             @include displayFlex($jc:flex-start,$fd:row);
             align-items: center;

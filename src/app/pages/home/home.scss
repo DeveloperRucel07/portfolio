@@ -1,36 +1,6 @@
-@import 'scss/_color.scss';
-@import 'scss/_mixins.scss';
-@font-face {
-  font-display: swap; 
-  font-family: 'Quantico';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../public/fonts/quantico-v19-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Quantico';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../public/fonts/quantico-v19-latin-700.woff2') format('woff2'); 
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  font-family: 'Quantico', Arial, Helvetica, sans-serif;
-}
-
-body{
-  @include displayFlex($jc:center, $fd:column);
-  background-color: $bg_color;
-  color: $secondary;
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
   
-}
-
 .main-content{
   position: relative;
   @include displayFlex($jc:center, $fd:column);
@@ -38,23 +8,13 @@ body{
   gap: 20px;
   scroll-behavior: smooth;
   >*{
-      width: 100%;              
+      width: 100%;                
   }
 }
 
 
 
-
-
 @media (max-width: 800px) {
-  body{
-    height: auto;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column !important;
-  }
 
   .main-content{
     margin-left: 0px;
@@ -67,8 +27,19 @@ body{
     >*{
         width: 100%;                
     }
-
       
+  }
+
+  app-socials{
+    display: none;
+  }
+
+  app-footer{
+    position: absolute;
+    top: 104%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
 
   .next-section{
@@ -96,9 +67,6 @@ body{
 }
 
 @media(min-width: 801px){
-  body{
-     overflow: hidden;
-  }
   .main-content{
     margin-left: 80px;
     display: flex;
@@ -106,17 +74,43 @@ body{
     flex-direction: row;
     align-items: flex-start;
     overflow-x: scroll;
-    overflow-y: auto;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     width: 100vw;
     height: 100vh;
     max-height: 1200px;
-
-    .footer{
-      background-color: $primary;
+    >*{
+      flex: 0 0 100vw;
+      height: 100vh;
     }
 
+  }
+
+  app-footer{
+    display: none !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccff00;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff4d;
+    display: none;
   }
 
 }

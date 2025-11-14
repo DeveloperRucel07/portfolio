@@ -3,10 +3,12 @@ import { Button } from "../button/button";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators  } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from "@angular/router";
+import { Footer } from "../footer/footer";
+import { Socials } from "../socials/socials";
 
 @Component({
   selector: 'app-contact',
-  imports: [Button, ReactiveFormsModule, RouterLink],
+  imports: [Button, ReactiveFormsModule, RouterLink, Footer, Socials],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

@@ -91,6 +91,7 @@
             }
 
             .icons{
+               
                 gap: 30px;
                 img{
                     width: 50px;
@@ -113,7 +114,24 @@
         .next-section{
             position: absolute;
             bottom: 10%;
-            right: 10%;
+            right: 5%;
         }
     }
+}
+
+
+@media (max-width:800px) {
+    .icons {
+
+         >*{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .located{
+            display: none !important;
+        }
+    }
+    
 }

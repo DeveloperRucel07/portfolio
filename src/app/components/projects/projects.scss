@@ -128,3 +128,12 @@
         border-radius: 20px;
     }
 }
+
+
+@media (max-width: 800px) {
+
+    .dots-content{
+        display: none !important;
+    }
+    
+}
