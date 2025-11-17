@@ -225,9 +225,6 @@
             transition: box-shadow 0.3s ease-in-out;
         }
         cursor: pointer;
-        &:hover img{
-            box-shadow: 0 4px 21px $primary;
-        }
     }
 }
 
@@ -326,7 +323,6 @@
 
         .up-start{
             img{
-                background: transparent;
                 content: url('https://rucel-tsafack.com/assets_icons/arrow_left.png');
             }
         }

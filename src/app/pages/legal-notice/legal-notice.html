@@ -1,4 +1,5 @@
 <div class="legal-notice" id="legacy">
+    <div id="first-notice"></div>
     <h1 class="title">Legal Notice</h1>
     <div class="left">
         <section class="info">
@@ -39,6 +40,7 @@
         <app-button navigateTo="/legal-notice#next-notice" class="next-section"> <img src="https://rucel-tsafack.com/assets_icons/arrow_right.png" alt="" srcset=""> </app-button>
     </div>
     <div class="right" id="next-notice">
+        <div class="next-notice-right" >
         <div class="next-notice-content">
             <section class="use-product">
                 <h3>Use of the product</h3>
@@ -77,18 +79,19 @@
                     </p>
                 </div>
             </div>
-            <app-button navigateTo="#landing" class="up-start"> <img src="https://rucel-tsafack.com/assets_icons/arrow_left.png" alt="" srcset=""> </app-button>
+            <app-button navigateTo="/legal-notice#first-notice" class="up-start"> <img src="https://rucel-tsafack.com/assets_icons/arrow_left.png" alt="" srcset=""> </app-button>
             <div class="bottom">
                 <p>
-                    <a routerLink="privacy-policy"> privacy policy</a>
+                    <a routerLink="/privacy-policy"> privacy policy</a>
                 </p>
                 <p>
-                    <a routerLink="legal-notice"> legal notice</a>
+                    <a routerLink="/legal-notice"> legal notice</a>
                 </p>
                 <p class="copyright"> &copy; Rucel Tsafack 2025 </p>
             </div>
         </div>
     </div>
-    
     <app-footer class="footer"></app-footer>
+    </div>
+    
 </div>

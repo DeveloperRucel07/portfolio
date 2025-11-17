@@ -8,9 +8,15 @@
     font-size: 2rem;
     height: 100%;
     .next-section{
+        width: 100px;
+        height: 40px;
         position: absolute;
         top: 150px ;
         right: 5% !important;
+        img{
+            transition: all 0.3s ease;
+           
+        }
     }
 
     .location{
