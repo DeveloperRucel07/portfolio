@@ -1,5 +1,5 @@
-<div class="legal-notice">
-    <h1>Legal Notice</h1>
+<div class="legal-notice" id="legacy">
+    <h1 class="title">Legal Notice</h1>
     <div class="left">
         <section class="info">
             <h3>Imprint</h3>
@@ -36,30 +36,59 @@
                 including any associated copyrighted material, trademarks, and other proprietary information.
             </p>
         </section>
+        <app-button navigateTo="/legal-notice#next-notice" class="next-section"> <img src="https://rucel-tsafack.com/assets_icons/arrow_right.png" alt="" srcset=""> </app-button>
     </div>
-    <div class="right">
-        <section class="use-product">
-            <h3>Use of the product</h3>
-            <p>
-                Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.
-            </p>
-        </section>
-        <section class="disclaimer">
-            <h3>Disclaimer of warranties and limitation of liability</h3>
-            <p>
-                Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.
-            </p>
-        </section>
-        <section class="indemnity">
-            <h3>Indemnity</h3>
-            <p>
-            You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.</p>
+    <div class="right" id="next-notice">
+        <div class="next-notice-content">
+            <section class="use-product">
+                <h3>Use of the product</h3>
+                <p>
+                    Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.
+                </p>
+            </section>
+            <section class="disclaimer">
+                <h3>Disclaimer of warranties and limitation of liability</h3>
+                <p>
+                    Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.
+                </p>
+            </section>
+            <section class="indemnity">
+                <h3>Indemnity</h3>
+                <p>
+                You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.</p>
 
-            <p class="question">For any questions or notices, please contact us at contact@rucel-tsafack.com</p>
-            <p class="date">
-                Date: July 26, 2025
-            </p>
-        </section>
+                <p class="question">For any questions or notices, please contact us at contact@rucel-tsafack.com</p>
+                <p class="date">
+                    Date: July 26, 2025
+                </p>
+            </section> 
+        </div>
+        
+        <div class="contact-info">
+            <div class="top">
+                <div class="link">
+                    <p>
+                        <img src="https://rucel-tsafack.com/assets_icons/email_link.png" alt="">
+                        <a href="mailto:contact@rucel-tsafack.com"> contact@rucel-tsafack.com</a>
+                    </p>
+                    <p>
+                        <img src="https://rucel-tsafack.com/assets_icons/phone_call.png" alt="">
+                        <a href="tel:+4915563633814"> +49 15563633814</a>
+                    </p>
+                </div>
+            </div>
+            <app-button navigateTo="#landing" class="up-start"> <img src="https://rucel-tsafack.com/assets_icons/arrow_left.png" alt="" srcset=""> </app-button>
+            <div class="bottom">
+                <p>
+                    <a routerLink="privacy-policy"> privacy policy</a>
+                </p>
+                <p>
+                    <a routerLink="legal-notice"> legal notice</a>
+                </p>
+                <p class="copyright"> &copy; Rucel Tsafack 2025 </p>
+            </div>
+        </div>
     </div>
+    
     <app-footer class="footer"></app-footer>
 </div>

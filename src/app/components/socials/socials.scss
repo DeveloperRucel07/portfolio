@@ -8,6 +8,35 @@
         list-style: none;
     }
 
+    .linkedin{
+        &:hover{
+            img{
+                background: transparent;
+                content: url('https://rucel-tsafack.com/assets_icons/linkedin_hover.png');
+            }
+        }
+    }
+
+    .github{
+        &:hover{
+            img{
+                background: transparent;
+                content: url('https://rucel-tsafack.com/assets_icons/github_hover.png');
+            }
+        }
+    }
+
+    .email{
+        &:hover{
+            img{
+                background: transparent;
+                content: url('https://rucel-tsafack.com/assets_icons/email_hover.png');
+            }
+        }
+    }
+
+
+
     h3{
         @include displayFlex($jc:center, $fd:row);
         gap: 6px;
