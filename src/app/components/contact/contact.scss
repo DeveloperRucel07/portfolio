@@ -404,6 +404,10 @@
             }
         }
 
+        .mobile-off{
+            display: none !important;
+        }
+
         .up-start{
             @include displayFlex($fd:column);
             align-items: center;

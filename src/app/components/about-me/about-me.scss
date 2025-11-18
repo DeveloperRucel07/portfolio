@@ -10,6 +10,10 @@
         @include titleMobile();
     }
 
+    .my-history{
+        padding: 15px;
+    }
+
     .about-me-content{
         @include displayFlex($fd:column);
         align-items: center;

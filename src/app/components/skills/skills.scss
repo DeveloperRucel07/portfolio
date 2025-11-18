@@ -9,6 +9,10 @@
     .title{
         @include titleMobile();
     }
+
+    .p-skill{
+      padding: 15px;
+    }
     
     .skills-content{
         @include displayFlex($fd:column);

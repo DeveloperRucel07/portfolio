@@ -15,19 +15,19 @@ export class Testimoni implements AfterViewInit{
   testimonies:TestimoniInterface[] = [
 
     {
-      message:'‘‘Rucel is a reliable and friendly person. Work in a structured way and write a clear code. I recommend him as a colleague.’’',
+      message:'‘‘Rucel ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt sauberen Code. Ich empfehle ihn als Kollegen.’’',
       developerName:'Tino Wulf',
       projectName:'Project Join'
     },
 
     {
-      message:'‘‘He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.‘’',
+      message:'‘‘Er ist ein zuverlässiger Teamplayer und kann mit dem Druck von Abgabeterminen gut umgehen. Strukturierte Arbeitsweise und sauberer Code.‘’',
       developerName:'Enrico H.',
       projectName:'Project KochWelt'
     },
 
     {
-      message:'‘‘Rucel had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person.’’',
+      message:'‘‘Rucel musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und präsentieren. Er ist eine zuverlässige und freundliche Person.’’',
       developerName:'Junus Ergin',
       projectName:'Project Join'
     },

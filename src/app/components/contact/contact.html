@@ -47,13 +47,13 @@
                     >
                     <span class="checkmark" [class.outline-error]="isInvalid('agree')" tabindex="0"></span>
                 </label>
-                I've read the <a routerLink="/privacy-policy">pricacy policy </a> and agree to the processing of my data as outlined.
+                Ich Habe die <a routerLink="/privacy-policy">Datenschutzrechlinie </a> gelesen und stimme der Verarbeitung meiner Daten wie beschreiben zu.
                 @if(showError('agree')){
-                    <p class="error">Please accept the privacy policy.</p>
+                    <p class="error">Bitte akzeptieren Sie die Datenschutzbestimmungen.</p>
                 }
             </div>
             <div class="sucess-message" [class.open]="submitting">
-                Thanks, your message has been sent.
+                Vielen Dank für Ihre Nachricht.
             </div>
             <div class="form-btn">
                 <button tabindex="0" type="submit" [disabled]="submitForm.invalid" [class.disabled]="submitForm.invalid" >Send</button>
@@ -62,10 +62,11 @@
         
         <div class="contact-info">
             <div class="top">
-                <h4>Let us work together.</h4>
+                <h4>Lasst uns zusammenarbeiten</h4>
                 <p>
-                    Encourage people to contact you and describe what role you are interested in. 
-                    Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.
+                    Möchten sie ihre Firma digitalisieren oder Eine Anwendung für ihre Bussiness?
+                    Sie haben spannende Projekte und brauchen Unterstützung?
+                    Ich freue mich wenn Sie Kontakt zu mir aufnehmen!
                 </p>
                 <div class="link">
                     <p>
@@ -78,13 +79,13 @@
                     </p>
                 </div>
             </div>
-            <app-button navigateTo="#landing" class="up-start"> <img src="https://rucel-tsafack.com/assets_icons/arrow_left.png" alt="" srcset=""> </app-button>
+            <app-button navigateTo="#landing" class="up-start mobile-off"> <img src="https://rucel-tsafack.com/assets_icons/arrow_left.png" alt="" srcset=""> </app-button>
             <div class="bottom">
                 <p>
-                    <a routerLink="privacy-policy"> privacy policy</a>
+                    <a routerLink="privacy-policy"> Datenschutzrichtlinie</a>
                 </p>
                 <p>
-                    <a routerLink="legal-notice"> legal notice</a>
+                    <a routerLink="legal-notice"> Impressum</a>
                 </p>
                 <p class="copyright"> &copy; Rucel Tsafack 2025 </p>
             </div>

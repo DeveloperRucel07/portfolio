@@ -13,30 +13,30 @@ export class Projects {
   expandedCardIndex: number  = 0;
   projects: Project[] = [
     {
-      projectName: 'Project Join',
-      aboutProject: 'Task management inspired by Kanban System. Create and Organise Tasks using drag and drop functions. assign users and categories.',
+      projectName: 'Projekt Join',
+      aboutProject: 'Aufgabenmanagement inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren. Benutzer und Kategorien zuweisen.',
       usedTechno: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-      earnedSkills: ['Direct application of acquired knowledge in JavaScript, HTML, and CSS. Insight into professional teamwork with Scrum and tools like Git and Figma.' ],
+      earnedSkills: ['Direkte Anwendung der erworbenen Kenntnisse in JavaScript, HTML und CSS. Einblick in die professionelle Teamarbeit mit Scrum und Tools wie Git und Figma.' ],
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
     }, 
 
     {
-      projectName: 'Project Sharkie',
-      aboutProject: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+      projectName: 'Projekt Sharkie',
+      aboutProject: 'Ein einfaches Jump-and-Run-Spiel, basierend auf objektorientierter Programmierung. Hilf Sharkie, die Münzen und Giftflaschen zu finden, um den Killerwal zu bekämpfen und den Ozean zu schützen.',
       usedTechno: ['OOP', 'JavaScript', 'HTML', 'CSS'],
-      earnedSkills: ['Deepening my knowledge of JavaScript. Learning and applying object-oriented programming (OOP), using browser events.'],
+      earnedSkills: ['Vertiefung meiner JavaScript-Kenntnisse. Erlernen und Anwenden objektorientierter Programmierung (OOP) unter Verwendung von Browserereignissen.'],
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
       projectLink: 'https://sharkie.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_sharkie.png'
     },
 
     {
-      projectName: 'Project ShopDev',
-      aboutProject: 'A complete Ecommerce website with a functional shopping cart, wish list, and user authentication system. Payement integration usin Card and PayPal.',
-      usedTechno: ['Angular', 'Firebase', 'Tailwind CSS', 'HTML', 'SCSS'],
-      earnedSkills: [' Comprehensive understanding of Angular. Using Firebase for backend services. Implementing responsive design with Tailwind CSS.'],
+      projectName: 'Projekt ShopDev',
+      aboutProject: 'Eine vollständige E-Commerce-Website mit funktionalem Warenkorb, Wunschliste und Benutzerauthentifizierungssystem. Zahlungsabwicklung per Karte und PayPal.',
+      usedTechno: ['Angular','Material Design', 'Tailwind CSS', 'HTML', 'SCSS'],
+      earnedSkills: ['Vertiefung meine Angular-Kenntnisse,die nutzunf von Interface und typisierung in angular. implementierung von responsive Design mit Tailwins CSS. '],
       githubLink: 'https://github.com/DeveloperRucel07/shopdev',
       projectLink: 'https://shopdev.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_shopdev.png'
@@ -50,7 +50,6 @@ export class Projects {
     } else {
       this.expandedCardIndex = index;
     }
-    console.log('Toggled card expansion. Expanded card index:', this.expandedCardIndex);
   }
 
   @ViewChild('projectList', {static: false}) projectList!: ElementRef<HTMLDivElement>;
@@ -60,7 +59,6 @@ export class Projects {
     ngAfterViewInit() {
     const el = this.projectList?.nativeElement;
     if(!el){
-      console.warn('projectList not yet available in ngAfterViewInit');
       return
     }
     el.addEventListener('scroll', () => this.updateActiveIndex());

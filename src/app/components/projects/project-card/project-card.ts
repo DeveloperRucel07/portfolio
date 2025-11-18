@@ -21,6 +21,5 @@ export class ProjectCard {
 
   onCardClick() {
     this.cardClicked.emit(this.index());
-    console.log('Card clicked:', this.index());
   }
 }

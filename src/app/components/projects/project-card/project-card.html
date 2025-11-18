@@ -7,14 +7,14 @@
     <div class='project-detail'>
         <div class="detail-text">
             <li class="about">
-                About the project
+                Über das Projekt
                 <p>
                     {{aboutProject()}}
                 </p>
 
             </li>
             <li class="used-techno">
-                Technologies i have used
+                Technologien, die ich verwendet habe
                 <p>
                     @for(techno of usedTechno(); track techno; let last = $last){
                         {{techno }} @if (!last) { | }
@@ -23,7 +23,7 @@
 
             </li>
             <li>
-                What i have learned
+                Was ich gelernt habe
                 <p>
                     @for(skill of earnedSkills(); track skill; let last = $last){
                         {{skill}} @if (!last) { | }
@@ -45,9 +45,9 @@
     
     <div class="expand-indicator"  (click)="onCardClick()">
         @if (isExpanded()) {
-            <span>Show me less ▲</span>
+            <span>Weniger anzeigen ▲</span>
         } @else {
-            <span>Show me more ▼</span>
+            <span>Mehr anzeigen ▼</span>
         }
     </div>
 </div>

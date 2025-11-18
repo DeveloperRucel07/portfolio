@@ -24,7 +24,7 @@
         align-items: center;
         overflow-x: auto;
         overflow-y: hidden;
-
+        
         
         .title{
             @include title();
@@ -137,11 +137,11 @@
     .legal-notice{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         margin-left: 0 !important;
         margin: 0;
-        margin-top: 120px !important;
-
+        padding-top: 100px !important;
         .title{
             @include titleMobile();
             width: 100%;
@@ -149,7 +149,7 @@
         }
         
         .left, .right{
-            padding: 10px;
+            
             flex: 0 0 100vw;
         }
 
@@ -161,10 +161,12 @@
         }
 
         h3{
+            padding: 10px;
             margin: 10px 10px 10px 0;
         }
 
         p{
+            padding: 10px;
             margin-left: 5px;
         }
 

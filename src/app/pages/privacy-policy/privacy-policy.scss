@@ -29,7 +29,7 @@
         
         .title{
             @include title();
-            top: 40%;
+            top: 60%;
             left: 0;
         }
         
@@ -96,14 +96,16 @@
     .privacy-policy{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         margin-left: 0 !important;
         margin: 0;
-        padding-top: 120px !important;
+        padding-top: 100px !important;
 
         .title{
             @include titleMobile();
             width: 100%;
+            font-size: 28px;
             text-align: start !important;
         }
         
