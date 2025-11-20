@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
 
@@ -8,35 +8,26 @@ import { Header } from "./components/header/header";
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App{
   protected readonly title = signal('portfolio');
 
   @ViewChild('scrollable') scrollable!: ElementRef<HTMLDivElement>;
 
   constructor() {}
 
-  @HostListener('wheel', ['$event'])
+  @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent) {
+    // event.preventDefault();
     if (!this.scrollable?.nativeElement) return;
-    const delta = this.normalizeWheelDelta(event);
+    const deltaY = event.deltaY;
     const step = 7;
-    this.scrollable.nativeElement.scrollLeft += delta*step;
-    event.preventDefault();
+    this.scrollable.nativeElement.scrollLeft += deltaY*step;
+    console.log(this.scrollable.nativeElement.scrollLeft)
   }
 
 
-  private normalizeWheelDelta(event: WheelEvent): number {
-    if (typeof event.deltaY === 'number') {
-      return event.deltaY;
-    }
-    const anyEv = event as WheelEvent & { wheelDelta?: number; detail?: number };
-    if (typeof anyEv.wheelDelta === 'number') {
-      return -anyEv.wheelDelta;
-    }
-    if (typeof anyEv.detail === 'number') {
-      return anyEv.detail;
-    }
-    return 0;
-  }
+
+
+
 
 }

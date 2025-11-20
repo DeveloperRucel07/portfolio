@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import { Landing } from "../../components/landing/landing";
 import { AboutMe } from "../../components/about-me/about-me";
 import { Skills } from "../../components/skills/skills";
@@ -16,6 +16,19 @@ import { Footer } from "../../components/footer/footer";
 })
 export class Home {
 
+   @ViewChild('mainContent') scrollable!: ElementRef<HTMLDivElement>;
+
+  constructor() {}
+
+  @HostListener('window:wheel', ['$event'])
+  onWheel(event: WheelEvent) {
+    event.preventDefault();
+    if (!this.scrollable?.nativeElement) return;
+    const deltaY = event.deltaY;
+    const step = 7;
+    this.scrollable.nativeElement.scrollLeft += deltaY*step;
+    console.log(this.scrollable.nativeElement.scrollLeft)
+  }
   
 
 }

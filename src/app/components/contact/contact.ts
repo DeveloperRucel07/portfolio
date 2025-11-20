@@ -19,9 +19,9 @@ export class Contact {
   submitError = '';
 
   submitForm: FormGroup = new FormGroup({
-    name : new FormControl('', [Validators.required, Validators.minLength(2)]),
+    name : new FormControl('', [Validators.required, Validators.minLength(3)]),
     email : new FormControl('', [Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/), Validators.required]),
-    message: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    message: new FormControl('', [Validators.required, Validators.minLength(10)]),
     agree: new FormControl(false, [Validators.requiredTrue])
   });
 

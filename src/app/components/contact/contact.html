@@ -7,37 +7,46 @@
             <input type="text" 
                 tabindex="0"
                 id="name"
-            [placeholder]="showError('name') ? 'Your Name is required' : 'Your Name' " 
+                placeholder="Ihre Name" 
                 formControlName="name" 
                 [class.outline-error]="isInvalid('name')" 
                 autocomplete="name"
             >
 
+            @if(showError('name')){
+                <p class="error">Ihre Name kann zB. Max Musterman.</p>
+            }@else if(isInvalid('name')){
+                <p class="error">Ihre Name muss min 3 Charakter sein.</p>
+
+            }
+
+
             <input type="email" 
-            tabindex="0"
+                tabindex="0"
                 id="email"
-                [placeholder]="
-                    showError('email', 'required')
-                    ? 'Email is required'
-                    : showError('email', 'email')
-                    ? 'Enter a valid email address'
-                    : 'Your email'
-                "
+                placeholder="Ihre Email Adresse"
                 formControlName="email" 
                 [class.outline-error]="isInvalid('email')" 
                 autocomplete ="email"
             >
-
+            @if(showError('email', 'required')){
+                <p class="error">Ihre Email muss angegeben werden</p>
+            }@else if(showError('email', 'email') || isInvalid('email')){
+                <p class="error">Ihre Email kann zB. max.musterman@gmx.de</p>
+            }
+            
             <textarea  
             tabindex="0"
-                id="message"
-                [placeholder]="showError('message') ? 'Your message is required' : 'Your message'"
-                formControlName="message" 
-                [class.outline-error]="isInvalid('message')" 
+            id="message"
+            placeholder="Ihre Nachricht"
+            formControlName="message" 
+            [class.outline-error]="isInvalid('message')" 
             >
-
-            
+        
             </textarea>
+            @if(isInvalid('message') || showError('message')){
+                <p class="error">Ihre Nachricht ist zu kurz,um berücksichtigt  zu werden.</p>
+            }
 
             <div class="check-policy">
                 <label class="neon-checkbox" >
