@@ -69,8 +69,7 @@
     .landing{
         width: 100vw;
         height: 100vh;
-        max-height: 1200px;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         overflow-y: hidden;
     }
 }

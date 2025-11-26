@@ -55,7 +55,10 @@ export class Contact {
           error: (error) => {
             console.error(error);
           },
-          complete: () => this.submitting = true,
+          complete: () => {
+            this.showsuccessMessage();
+          },
+          
         });
     }else{
 

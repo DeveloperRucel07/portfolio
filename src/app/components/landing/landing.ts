@@ -12,7 +12,7 @@ export class Landing implements AfterViewInit {
 
   @ViewChild('typingText') typingText!: ElementRef<HTMLHeadingElement>;
   
-  words = ['Frontend Developer', 'Digital Transformer', 'Vibe Code Cleanup'];
+  words = ['Frontend Developer'];
   typingSpeed = 100; 
   erasingSpeed = 50;
   delayBetweenWords = 2000; 

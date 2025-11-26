@@ -1,59 +1,117 @@
-# Portfolio
+# 🎯 Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+A modern, responsive portfolio website built with **Angular 20** and **SCSS**. Showcase your projects, skills, and professional experience with an elegant and interactive user interface.
 
-## Development server
+## ✨ Features
 
-To start a local development server, run:
+- **Responsive Design** - Mobile-first approach with SCSS styling
+- **Multi-language Support** - i18n support for English, German, and French
+- **Modern Angular Stack** - Built with Angular 20+ and latest best practices
+- **Component-Based Architecture** - Modular, reusable components
+- **Contact Form** - Email integration using PHP backend
+- **Projects Showcase** - Display your portfolio projects with cards
+- **Testimonials Section** - Share client feedback and reviews
+- **Skills Display** - Highlight your professional skills
+- **Social Links** - Integration with social media profiles
+- **Unit Testing** - Comprehensive test suite with Karma/Jasmine
 
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- Angular CLI v20+
+
+### Installation
+
+1. Clone the repository:
 ```bash
-ng serve
+git clone https://github.com/DeveloperRucel07/portfolio.git
+cd portfolio
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Install dependencies:
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+3. Start the development server:
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+The application will be available at `http://localhost:4200`
 
-To build the project run:
+## 📦 Available Scripts
 
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start the development server |
+| `npm run build` | Build the project for production |
+| `npm run watch` | Build in watch mode for development |
+| `npm test` | Run unit tests |
+| `ng serve` | Serve with Angular CLI |
+
+## 🎨 Styling
+
+The project uses **SCSS** for styling with:
+- Centralized color variables in `_color.scss`
+- Reusable mixins in `_mixins.scss`
+- Component-scoped styles for maintainability
+- Responsive design patterns
+
+## 🌐 Multi-Language Support
+
+Translation files are located in `src/assets/i18n/`:
+- `en.json` - English
+- `de.json` - German
+- `fr.json` - French
+
+## 📧 Contact Form
+
+The contact form uses a PHP backend (`sendMail.php`) to handle email submissions. Ensure your server supports PHP for full functionality.
+
+## 🧪 Testing
+
+Run the test suite:
 ```bash
-ng build
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The project uses:
+- **Jasmine** - Testing framework
+- **Karma** - Test runner
+- **Chrome Launcher** - Browser for tests
 
-## Running unit tests
+## 🔧 Configuration Files
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- `tsconfig.json` - TypeScript configuration
+- `tsconfig.app.json` - App-specific TypeScript settings
+- `tsconfig.spec.json` - Test-specific TypeScript settings
+- `angular.json` - Angular CLI configuration
 
+## 📱 Responsive Breakpoints
+
+The design follows mobile-first principles with SCSS mixins for responsive layouts across:
+- Mobile devices (320px and up)
+- Tablets (768px and up)
+- Desktops (1024px and up)
+- Large screens (1440px and up)
+
+## 🚢 Production Build
+
+Create a production build:
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+The compiled output will be in the `dist/portfolio` directory, ready for deployment.
 
-For end-to-end (e2e) testing, run:
+## 📄 Legal Pages
 
-```bash
-ng e2e
-```
+- **Privacy Policy** - `/privacy-policy`
+- **Legal Notice** - `/legal-notice`
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Built with ❤️ using Angular 20
