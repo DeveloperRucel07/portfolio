@@ -1,21 +1,22 @@
 import { Routes } from '@angular/router';
-import { LegalNotice } from './pages/legal-notice/legal-notice';
-import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
-import { App } from './app';
-import { Home } from './pages/home/home';
 
 export const routes: Routes = [
     {
         path: '',
-        component: Home
+        pathMatch: 'full',
+        redirectTo : ''
+    },
+    {
+        path: '',
+        loadComponent: () => import('./pages/home/home').then(m => m.Home)
     },
     
     {
         path:'legal-notice',
-        component: LegalNotice,
+        loadComponent: () => import('./pages/legal-notice/legal-notice').then(m => m.LegalNotice)
     },
     {
         path: 'privacy-policy',
-        component: PrivacyPolicy,
+        loadComponent: () => import('./pages/privacy-policy/privacy-policy').then(m => m.PrivacyPolicy)
     }
 ];
