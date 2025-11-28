@@ -27,7 +27,7 @@ export class Testimoni implements AfterViewInit{
     },
 
     {
-      message:'‘‘Rucel musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und präsentieren. Er ist eine zuverlässige und freundliche Person.’’',
+      message:'‘‘Rucel konnte in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und präsentieren. Er ist eine zuverlässige und freundliche Person.’’',
       developerName:'Junus Ergin',
       projectName:'Project Join'
     },
@@ -40,7 +40,6 @@ export class Testimoni implements AfterViewInit{
   ngAfterViewInit() {
     const el = this.messageList?.nativeElement;
     if(!el){
-      console.warn('messageList not yet available in ngAfterViewInit');
       return
     }
     el.addEventListener('scroll', () => this.updateActiveIndex());

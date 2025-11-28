@@ -17,12 +17,10 @@ export class App{
 
   @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent) {
-    // event.preventDefault();
     if (!this.scrollable?.nativeElement) return;
     const deltaY = event.deltaY;
     const step = 7;
     this.scrollable.nativeElement.scrollLeft += deltaY*step;
-    console.log(this.scrollable.nativeElement.scrollLeft)
   }
 
 
