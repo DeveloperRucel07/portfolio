@@ -10,7 +10,7 @@ import { Socials } from "../socials/socials";
   selector: 'app-contact',
   imports: [Button, ReactiveFormsModule, RouterLink, Footer, Socials],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss',
+  styleUrls: ['./contact.scss', './responsive.scss'],
 })
 export class Contact {
 

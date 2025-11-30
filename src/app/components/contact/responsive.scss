@@ -1,0 +1,109 @@
+@import '../../../scss/_color.scss';
+@import '../../../scss/_mixins.scss';
+
+
+@media(min-width: 965px) and (max-width: 1199px) {
+    .contact{
+        position: relative;
+        display: flex;
+        justify-content: start !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        padding-left:150px;
+        padding-top: 50px;
+        padding-bottom: 0;
+        width: 100vw;
+        height: auto;
+        scroll-snap-align: start;
+        overflow-y: hidden;
+        
+        .title{
+            @include titleMobile();
+        }
+
+        .local-footer{
+            display: none;
+        }
+
+        .responsive-link-up{
+            display: none !important;
+        }
+
+        form{
+            padding: 30px;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: start;
+            align-items: center;
+            align-content: center;
+            .contact-info{
+                gap: 50px;
+                .top{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                p, h4{
+                    text-align: end;
+                }
+                .link{
+                    align-items: flex-end;
+                    justify-content: center;
+                }
+
+                .bottom{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                    p{
+                        text-align: end;
+                        a{
+                            text-align: end;
+                            text-decoration: none;
+                            color:$white;
+                            &:hover {
+                                color: $primary;
+                            }   
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .social-links{
+            display: none !important;
+        }
+
+        .responsive-link-up{
+            display: flex !important;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 20px;
+            >*{
+                padding: 30px;
+            }
+        }
+
+        .bottom{
+            display: none !important;
+        }
+
+        .mobile-off{
+            display: none !important;
+        }
+
+
+        .local-footer{
+            display: none !important;
+        }
+
+    }
+
+}
