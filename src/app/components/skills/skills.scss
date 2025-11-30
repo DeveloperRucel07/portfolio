@@ -10,6 +10,10 @@
         @include titleMobile();
     }
 
+    .next-section{
+        display: none !important;
+    }
+
     .p-skill{
       padding: 15px;
     }
@@ -88,8 +92,33 @@
     }
 }
 
+@media(min-width: 966px) and (max-width: 1199px){
+  .skills{
+      position: relative;
+      justify-content: start !important;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 150px;
+      padding-right: 100px;
+      width: 100vw;
+      // height: 100vh;
+      scroll-snap-align: start;
+      overflow-y: hidden;
+      .title{
+         @include titleMobile();
+      }
 
-@media(min-width: 801px){
+      .next-section{
+        display: none !important;
+      }
+  }
+
+  
+
+}
+
+
+@media(min-width: 1200px){
     .skills{
         position: relative;
         @include displayCenter();
@@ -128,6 +157,7 @@
         }
 
         .next-section{
+            display: block;
             position: absolute;
             top: 15%;
             right: 5%;

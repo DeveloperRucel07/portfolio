@@ -7,14 +7,14 @@
     <div class='project-detail'>
         <div class="detail-text">
             <li class="about">
-                Über das Projekt
+                Über das Projekt:
                 <p>
                     {{aboutProject()}}
                 </p>
 
             </li>
             <li class="used-techno">
-                Technologien, die ich verwendet habe
+                Technologien, die ich verwendet habe:
                 <p>
                     @for(techno of usedTechno(); track techno; let last = $last){
                         {{techno }} @if (!last) { | }
@@ -23,7 +23,7 @@
 
             </li>
             <li>
-                Was ich gelernt habe
+                Erworbenen Kenntnisse:
                 <p>
                     @for(skill of earnedSkills(); track skill; let last = $last){
                         {{skill}} @if (!last) { | }

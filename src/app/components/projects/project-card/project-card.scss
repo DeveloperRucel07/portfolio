@@ -22,6 +22,7 @@
     .expand-indicator{
         height: 50px;
         width: 100%;
+        cursor: pointer;
         background-color: $bg_color_secondary;
         @include displayFlex($jc:center);
         display: none;

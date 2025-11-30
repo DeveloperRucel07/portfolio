@@ -70,7 +70,7 @@
     }
 }
 
-@media(min-width: 801px){
+@media(min-width: 1200px){
     .socials{
         position: fixed;
         top: 20px;
@@ -79,7 +79,13 @@
     }
 }
 
-@media(max-width: 800px){
+@media(min-width: 965px) and (max-width: 1199px){
+    .socials{
+        padding-left: 150px;
+    }
+}
+
+@media(max-width: 965px){
     .socials{
         position: sticky;
         width: 100%;

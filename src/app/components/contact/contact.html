@@ -1,8 +1,8 @@
-<div class="contact" >
+<div class="contact" id="contact">
     <div class="title">
         <h2>Contact me</h2>
     </div>
-    <div class="content" id="contact">
+    <div class="content">
         <form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
             <input type="text" 
                 tabindex="0"
@@ -107,7 +107,7 @@
     </div>
     <div class="responsive-link-up">
         <app-button navigateTo="#landing" class="up-start"> <img src="https://rucel-tsafack.com/assets_icons/arrow_up.png" alt="" srcset=""> </app-button>
-        <app-socials></app-socials>
+        <app-socials class="social-links"></app-socials>
     </div>
     <div class="local-footer">
         <app-footer class="footer"></app-footer>

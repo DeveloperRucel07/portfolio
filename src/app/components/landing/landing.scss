@@ -8,6 +8,7 @@
     font-size: 2rem;
     height: 100%;
     .next-section{
+        display: block;
         width: 100px;
         height: 40px;
         position: absolute;
@@ -65,17 +66,39 @@
     }
 }
 
-@media(min-width: 801px){
+@media(min-width: 966px) and (max-width: 1199px){
+    .landing{
+        @include displayFlex($jc:center, $fd:center);
+        width: 100vw;
+        height: 100vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .image-landing{
+        @include displayFlex($jc:center, $fd:center);
+        align-items: center;
+        img{
+            width: 800px !important;
+            object-fit: cover;
+        }
+    }
+    .next-section{
+        display: none !important;
+    }
+}
+
+@media(min-width: 1200px){
     .landing{
         width: 100vw;
         height: 100vh;
         scroll-snap-align: center;
         overflow-y: hidden;
-    }
+    } 
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 965px) {
     .landing{
         position: relative;
         @include displayFlex($jc:center, $fd:column);
@@ -85,9 +108,7 @@
         padding: 50px 0;
 
         .next-section{
-            position: absolute;
-            bottom: 50px;
-            right: 100px !important;
+            display: none !important;
         }
 
         .location{
