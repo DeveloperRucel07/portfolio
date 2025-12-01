@@ -1,8 +1,8 @@
 {
     "header":{
-        "WHY-ME": "Warum ich",
-        "SKILLS": "Skills",
-        "WORK": "Projekte",
-        "CONTACT": "Kontakt"
+        "why_me": "Warum ich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
     }
 }

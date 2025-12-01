@@ -1,6 +1,12 @@
-import { Component, ElementRef, HostListener, Renderer2, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, Renderer2, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
+import {
+    TranslateService,
+    TranslatePipe,
+    TranslateDirective
+} from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-root',
@@ -10,10 +16,15 @@ import { Header } from "./components/header/header";
 })
 export class App{
   protected readonly title = signal('portfolio');
+  private translate = inject(TranslateService);
 
   @ViewChild('scrollable') scrollable!: ElementRef<HTMLDivElement>;
 
-  constructor() {}
+  constructor() {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setFallbackLang('en');
+    this.translate.use('en');
+  }
 
   @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent) {

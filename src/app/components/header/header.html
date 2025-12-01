@@ -9,13 +9,13 @@
     
     <div class="items" [class.open]="menuOpen">
         <ul>
-            <li (click)="closeMenu()"><a href="#why-me">Warum ich</a></li>
-            <li (click)="closeMenu()"><a href="#skills">Skills</a></li>
-            <li (click)="closeMenu()"><a href="#work">Projekte</a></li>
-            <li (click)="closeMenu()"><a href="#contact">Kontakt</a></li>
-            <!-- <li class="traduction">
-                <span (click)="closeMenu()">DE</span> | <span (click)="closeMenu()">EN</span>
-            </li> -->
+            <li (click)="closeMenu()"><a href="#why-me">{{'header.why_me' | translate }}</a></li>
+            <li (click)="closeMenu()"><a href="#skills">{{'header.skills' | translate }}</a></li>
+            <li (click)="closeMenu()"><a href="#work">{{'header.projects' | translate }}</a></li>
+            <li (click)="closeMenu()"><a href="#contact">{{'header.contact' | translate }}</a></li>
+            <li class="traduction" (click)="closeMenu()">
+                <span (click)="changeLanguage('de')" [class.active]="">DE</span> | <span (click)="changeLanguage('en')" [class.active]="">EN</span>
+            </li>
         </ul>
     </div>
 </div>

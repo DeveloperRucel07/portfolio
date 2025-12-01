@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-socials',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './socials.scss',
 })
 export class Socials {
+
+  private translate = inject(TranslateService);
+  
+  changeLanguage(lang: 'en' | 'de') {
+    this.translate.use(lang);
+    localStorage.setItem('language', lang);
+  }
 
   constructor(){
 
