@@ -241,7 +241,7 @@
 }
 
 
-@media(min-width: 1200px)  {
+@media(min-width: 1501px)  {
     .contact{
         position: relative;
         display: flex;
@@ -345,6 +345,13 @@
     display: none;
   }
 
+}
+
+
+@media (min-width: 966px) and (max-width: 1500px){
+    .footer{
+        display: none !important;
+    }
 }
 
 @media (max-width: 965px) {

@@ -1,7 +1,7 @@
 {
     "header":{
         "why_me": "Warum ich",
-        "skills": "Fähigkeiten",
+        "skills": "Skills",
         "projects": "Projekte",
         "contact": "Kontakt"
     },
@@ -11,12 +11,14 @@
     },
     "whyme":{
         "whyme": "Warum ich",
+        "skillset": "Ich entwickle digitale Interfaces, die sowohl technisch präzise als auch gestalterisch durchdacht sind. Mein Fokus liegt darauf, Frontends zu schaffen, die intuitiv, schnell und für alle Nutzer zugänglich sind. Dabei arbeite ich stets strukturiert, detailorientiert und mit dem Ziel, langlebige und hochwertige Produkte zu realisieren.",
         "aboutme": "Als Frontend-Entwickler schreibe ich sauberen, effizienten Code. Ich habe ein ausgeprägtes Gespür für Benutzerfreundlichkeit und eine ausgeprägte Teamorientierung. Mir ist es wichtig, intuitive und ansprechende Benutzeroberflächen zu entwickeln, und ich liefere stets qualitativ hochwertige Arbeit zuverlässig und professionell. Ich bin motiviert, detailorientiert und freue mich immer darauf, mich in neue Projekte einzubringen.",
         "new_skill":"Ich lerne immer gerne neue Technologien kennen. Sagen Sie mir einfach, welche Technologien ich für unser zukünftiges Projekt beherrschen sollte.",
         "me": "Ich bin",
-        "location": "befinde mich in Bad Segeberg.",
-        "relocation": "offen für einen Umzug.",
-        "remote": "offen für Remote-Arbeit."
+        "location": "befinde mich in Bad Segeberg",
+        "relocation": "offen für einen Umzug",
+        "remote": "offen für Remote-Arbeit",
+        "contact":"Kontaktieren"
     },
     "projects":{
         "description_join": "Task manager, inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",

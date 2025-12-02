@@ -5,10 +5,11 @@ import { HttpClient } from '@angular/common/http';
 import { RouterLink } from "@angular/router";
 import { Footer } from "../footer/footer";
 import { Socials } from "../socials/socials";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
-  imports: [Button, ReactiveFormsModule, RouterLink, Footer, Socials],
+  imports: [Button, ReactiveFormsModule, RouterLink, Footer, Socials, TranslatePipe],
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss', './responsive.scss'],
 })

@@ -92,7 +92,7 @@
     }
 }
 
-@media(min-width: 966px) and (max-width: 1199px){
+@media(min-width: 966px) and (max-width: 1500px){
   .skills{
       position: relative;
       justify-content: start !important;
@@ -111,6 +111,10 @@
       .next-section{
         display: none !important;
       }
+
+      .skills-content{
+        max-width: 800px;
+      }
   }
 
   
@@ -118,7 +122,7 @@
 }
 
 
-@media(min-width: 1200px){
+@media(min-width: 1501px){
     .skills{
         position: relative;
         @include displayCenter();
@@ -139,6 +143,10 @@
         .skills-content{
             padding-left: 80px;
             padding-right: 50px;
+            max-width: 1000px;
+            .p-skill{
+              font-size: 24px;
+            }
             .technologies{
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));;
                 gap: 20px;
@@ -167,16 +175,16 @@
 
 @keyframes bounce-rotate {
   0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0) scale(1);
   }
   30% {
-    transform: translateY(-14px) rotate(120deg) scale(1.06);
+    transform: translateY(-14px)  scale(1.06);
   }
   60% {
-    transform: translateY(0) rotate(260deg) scale(1.02);
+    transform: translateY(0)  scale(1.02);
   }
   100% {
-    transform: translateY(0) rotate(360deg) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 

@@ -11,12 +11,14 @@
     },
     "whyme":{
         "whyme": "Why me",
+         "skillset": "I develop digital interfaces that are both technically precise and esthetically sophisticated. My focus is on creating frontends that are intuitive, fast, and accessible to all users. I always work in a structured and detail-oriented manner, aiming to produce durable, high-quality products.",
         "aboutme": "As a frontend developer, I bring clean, efficient code, a strong eye for user experience, and a genuinely collaborative mindset. I care about building interfaces that feel intuitive and look polished, and I’m committed to delivering high-quality work with reliability and professionalism. I’m motivated, detail-oriented, and always ready to contribute to new projects",
         "new_skill":"I am always happy to learn new technologies,just tell me which technology should i need to know for our future Project.",
         "me": "I am",
         "location": "located in Bad Segeberg",
         "relocation": "open to relocated",
-        "remote": "open to work remote"
+        "remote": "open to work remote",
+        "contact":"Contact me"
     },
     "projects":{
         "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
@@ -51,7 +53,7 @@
             "content": "The content of this website has been created with the utmost care. However, no guarantee can be given for the accuracy, completeness, and timeliness of the content."
         },
         "ownership":{
-            "title": "External links:",
+            "title": "External links",
             "content": "This website contains links to external websites of third parties. We have no influence on the content of these sites. Therefore, we cannot assume any liability for this external content. The respective providers or operators of the linked sites are always responsible for their content."
             
         },
@@ -71,7 +73,7 @@
         },
         "right_protection":{
             "title": "Your data protection rights",
-            "content": "You have the right to access, correct, or delete your personal data stored by us. You can withdraw your consent to the processing of your data at any time. To exercise these rights, please contact us at"
+            "content": "You have the right to access, correct, or delete your personal data stored by us. You can withdraw your consent to the processing of your data at any time. To exercise these rights, please contact us at "
         },
         "cookies":{
             "content": "This website does not use cookies or other tracking technologies."

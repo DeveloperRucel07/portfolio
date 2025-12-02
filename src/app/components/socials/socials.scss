@@ -4,6 +4,7 @@
     @include displayFlex($jc:center, $fd:row);
     align-items: center;
     gap: 20px;
+    z-index: 10;
     li{
         list-style: none;
     }
@@ -70,7 +71,7 @@
     }
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1501px){
     .socials{
         position: fixed;
         top: 20px;
@@ -79,15 +80,18 @@
     }
 }
 
-@media(min-width: 965px) and (max-width: 1199px){
-    .socials{
-        padding-left: 150px;
+@media(min-width: 965px) and (max-width: 1500px){
+
+    .socials{  
+        position: fixed;
+        top: 20px;
+        right: 10%;
     }
 }
 
 @media(max-width: 965px){
     .socials{
-        position: sticky;
+        position: relative;
         width: 100%;
         height: 50px;
         bottom: 0 !important;

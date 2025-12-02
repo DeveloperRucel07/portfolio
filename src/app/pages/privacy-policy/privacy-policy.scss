@@ -1,7 +1,7 @@
 @import '../../../scss/_color.scss';
 @import '../../../scss/_mixins.scss';
 .privacy-policy{
-    margin-left: 130px !important;
+    margin-left: 140px !important;
     color: $white;
     width: 100vw;
     height: 100vh;
@@ -17,7 +17,7 @@
     }
 }
 
-@media (min-width: 801px){
+@media (min-width: 1501px){
     .privacy-policy{
         position: relative;
         display: flex;
@@ -31,6 +31,10 @@
             top: 60%;
             left: 0;
         }
+
+        .up-start{
+            display: block;
+        }
         
         .content{
             flex: 0 0 calc(100vw - 750px);
@@ -38,32 +42,101 @@
         }
 
         .contact-info{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-evenly;
-            gap: 50px;
-            width: 300px;
-            margin-right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-evenly;
+                gap: 50px;
+                width: 300px;
+                margin-right: 10px;
+
+            p, h4{
+                text-align: end;
+            }
+            .link{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                gap: 20px;
+                p{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                    }
+
+                }
+            }
+
+            .bottom{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 20px;
+                p{
+                    text-align: end;
+                    a{
+                        text-align: end;
+                        text-decoration: none;
+                        color:$white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 966px) and (max-width: 1500px){
+    .privacy-policy{
+        overflow-y: auto;
+        width: calc(100vw - 150px);
+    }
+
+    .up-start{
+        display: none;
+    }
+
+    .contact-info{
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 50px;
+        width: 100%;
+        margin-right: 10px;
+        padding: 10px;
 
         p, h4{
-            text-align: end;
+            text-align: start;
         }
         .link{
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             gap: 20px;
             p{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 10px;
                 a{
                     text-decoration: none;
                     color: $white;
+                    &:hover{
+                        color: $primary;
+                    }
                 }
 
             }
@@ -71,7 +144,7 @@
 
         .bottom{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-end;
             gap: 20px;
             p{
@@ -81,17 +154,26 @@
                     text-decoration: none;
                     color:$white;
                     cursor: pointer;
+                    &:hover{
+                        color: $primary;
+                    }
+
                 }
             }
         }
     }
+
+    .footer{
+        display: none;
     }
+
+    
 }
 
         
 
 
-@media (max-width: 800px) {
+@media (max-width: 965px) {
     .privacy-policy{
         display: flex;
         flex-direction: column;

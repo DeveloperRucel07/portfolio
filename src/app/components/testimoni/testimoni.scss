@@ -35,7 +35,7 @@
     }
 }
 
-@media(min-width: 965px) and (max-width: 1199px){
+@media(min-width: 965px) and (max-width: 1500px){
     .testimoni{
         position: relative;
         justify-content: start !important;
@@ -60,7 +60,7 @@
 
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1501px){
     .testimoni{
         position: relative;
         @include displayCenter();
