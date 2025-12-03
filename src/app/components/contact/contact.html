@@ -15,9 +15,9 @@
 
             <p class="error">
                 @if(showError('name')){
-                    Ihre Name kann zB. Max Musterman.
+                    {{'contact.error.name' | translate }}
                 }@else if(isInvalid('name')){
-                    Ihre Name muss min 3 Charakter sein.
+                    {{'contact.error.name' | translate }}
                 }
             </p>
             <input type="email" 
@@ -30,9 +30,9 @@
             >
             <p class="error">
                 @if(showError('email', 'required')){
-                    Ihre Email muss angegeben werden
+                    {{'contact.error.email.required' | translate }}
                 }@else if(showError('email', 'email') || isInvalid('email')){
-                    Ihre Email kann zB. max.musterman@gmx.de
+                    {{'contact.error.email.email' | translate }}
                 }
             </p>
             
@@ -47,7 +47,7 @@
             </textarea>
             <p class="error">
                 @if(isInvalid('message') || showError('message')){
-                    Ihre Nachricht ist zu kurz,um berücksichtigt  zu werden.
+                    {{'contact.error.message' | translate }}
                 }
             </p>
 
@@ -59,15 +59,15 @@
                     >
                     <span class="checkmark" [class.outline-error]="isInvalid('agree')" tabindex="0"></span>
                 </label>
-                Ich Habe die <a routerLink="/privacy-policy">Datenschutzrechlinie </a> gelesen und stimme der Verarbeitung meiner Daten wie beschreiben zu.
+                {{'contact.privacy_start' | translate }} <a routerLink="/privacy-policy">{{'contact.privacy_link' | translate }} </a> {{'contact.privacy_p' | translate }}
                 <p class="error"> 
                     @if(showError('agree')){
-                        Bitte akzeptieren Sie die Datenschutzbestimmungen.
+                        {{'contact.error.agree' | translate }}
                     }
                 </p>
             </div>
             <div class="sucess-message" [class.open]="submitting">
-                Vielen Dank für Ihre Nachricht.
+                {{'contact.send_success' | translate }}
             </div>
             <div class="form-btn">
                 <button tabindex="0" type="submit" [disabled]="submitForm.invalid" [class.disabled]="submitForm.invalid" >Send</button>
@@ -76,11 +76,9 @@
         
         <div class="contact-info">
             <div class="top">
-                <h4>Lasst uns zusammenarbeiten</h4>
+                <h4>{{'contact.start' | translate }}</h4>
                 <p>
-                    Möchten sie ihre Firma digitalisieren oder Eine Anwendung für ihre Bussiness?
-                    Sie haben spannende Projekte und brauchen Unterstützung?
-                    Ich freue mich wenn Sie Kontakt zu mir aufnehmen!
+                    {{'contact.about_position' | translate }}
                 </p>
                 <div class="link">
                     <p>

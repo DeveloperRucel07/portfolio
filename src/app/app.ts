@@ -22,8 +22,8 @@ export class App{
 
   constructor() {
     this.translate.addLangs(['de', 'en']);
-    this.translate.setFallbackLang('en');
-    this.translate.use('en');
+    this.translate.setFallbackLang('de');
+    this.translate.use('de');
   }
 
   @HostListener('window:wheel', ['$event'])
@@ -33,10 +33,6 @@ export class App{
     const step = 7;
     this.scrollable.nativeElement.scrollLeft += deltaY*step;
   }
-
-
-
-
 
 
 }

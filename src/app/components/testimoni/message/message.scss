@@ -2,8 +2,8 @@
 @import '../../../../scss/_mixins.scss';
 
 .message{
-    height: 185px;
-    width: 500px;
+    height: 180px;
+    width: 700px;
     border-radius: 30px;
     border: 1px solid $primary_light;
     padding: 15px;
@@ -17,18 +17,19 @@
     }
 
     .content{
-        width: 55%;
+        width: 60%;
         height: 100%;
         font-size: 18px;
         color: $white;
         @include displayFlex($fd:row);
         align-items: center;
+        padding: 4px;
     }
 
     .devName{
         @include displayFlex($fd:column);
         align-items: center;
-        width: 45%;
+        width: 40%;
         height: 100%;
         h3{
             font-size: 32px;

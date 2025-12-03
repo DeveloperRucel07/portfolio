@@ -14,7 +14,7 @@
             <li (click)="closeMenu()"><a href="#work">{{'header.projects' | translate }}</a></li>
             <li (click)="closeMenu()"><a href="#contact">{{'header.contact' | translate }}</a></li>
             <li class="traduction" (click)="closeMenu()">
-                <span (click)="changeLanguage('de')" [class.active]="">DE</span> | <span (click)="changeLanguage('en')" [class.active]="">EN</span>
+                <span (click)="changeLanguage('de')" [class.active]="saved === 'de'">DE</span> | <span (click)="changeLanguage('en')" [class.active]="saved === 'en'">EN</span>
             </li>
         </ul>
     </div>

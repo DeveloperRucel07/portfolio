@@ -21,6 +21,9 @@
         "contact":"Kontaktieren"
     },
     "projects":{
+        "about":"Über das Projekt:",
+        "technologies":"Technologien, die ich verwendet habe:",
+        "new_skills":"Erworbenen Kenntnisse:",
         "description_join": "Task manager, inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",
         "description_sharkie": "Ein simples Jump-’n’-Run-Spiel, basierend auf objektorientierter Programmierung. Hilf Sharkie, die Münzen und Giftflaschen zu finden, um den Killerwal zu bekämpfen und den Ozean zu schützen.",
         "description_shopdev": "Ein vollständiger E-Commerce-Shop mit Authentifizierung, Echtzeitdatenbank und sicherer Zahlungsabwicklung."
@@ -34,11 +37,21 @@
     },
     "contact":{
         "contact":"Kontakt",
+        "start":"Lasst uns zusammenarbeiten",
         "about_position": "Ich bin offen für neue Herausforderungen als Frontend-Entwickler und möchte gerne zu gut gestalteten, qualitativ hochwertigen Projekten beitragen. Wenn Sie jemanden suchen, der Wert auf sauberen Code und gute Zusammenarbeit legt, melden Sie sich gerne.",
         "privacy_start": "Ich habe gelesen ",
         "privacy_p" : " und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         "privacy_link": "Datenschutzrichtlinie",
-        "send_success": "Vielen Dank für Ihre Nachricht, wir haben Ihre E-Mail erhalten."
+        "send_success": "Vielen Dank für Ihre Nachricht, wir haben Ihre E-Mail erhalten.",
+        "error":{
+            "name":"Ihre Name kann zB. Max Mustermann",
+            "email":{
+                "required":"Ihre Email muss angegeben werden",
+                "email":"Ihre Email kann zB. max.musterman@gmx.de"
+            },
+            "message":"Ihre Nachricht ist zu kurz,um berücksichtigt zu werden.",
+            "agree":"Bitte akzeptieren Sie die Datenschutzbestimmungen."
+        }
     },
     "footer":{
         "role": "Frontend Entwickler",

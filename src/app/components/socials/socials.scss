@@ -68,7 +68,12 @@
                 color: $primary;
             }
         }
+
+        span.active{
+            color: $primary;
+        }
     }
+
 }
 
 @media(min-width: 1501px){

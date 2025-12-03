@@ -1,7 +1,9 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { Button } from "../button/button";
 import { TestimoniInterface } from '../../testimoni.interface';
 import { Message } from "./message/message";
+import { firstValueFrom } from 'rxjs';
+import { TranslateDirective, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimoni',
@@ -10,30 +12,49 @@ import { Message } from "./message/message";
   styleUrl: './testimoni.scss',
 })
 export class Testimoni implements AfterViewInit{
+  translate = inject(TranslateService)
   @ViewChild('messageList', {static: false}) messageList!: ElementRef<HTMLDivElement>;
 
   testimonies:TestimoniInterface[] = [
 
     {
-      message:'‘‘Rucel ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt sauberen Code. Ich empfehle ihn als Kollegen.’’',
+      message: '',
       developerName:'Tino Wulf',
       projectName:'Project Join'
     },
 
     {
-      message:'‘‘Er ist ein zuverlässiger Teamplayer und kann mit dem Druck von Abgabeterminen gut umgehen. Strukturierte Arbeitsweise und sauberer Code.‘’',
+      message:'',
       developerName:'Enrico H.',
       projectName:'Project KochWelt'
     },
 
     {
-      message:'‘‘Rucel konnte in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und präsentieren. Er ist eine zuverlässige und freundliche Person.’’',
-      developerName:'Junus Ergin',
+      message:'',
+      developerName:'Andreas B.',
       projectName:'Project Join'
     },
-
-
   ]
+
+  constructor(){
+      this.loadTranslations();
+      this.translate.onLangChange.subscribe(() => {
+        this.loadTranslations();
+      });
+    
+  }
+
+
+  async loadTranslations() {
+  this.testimonies[0].message =
+    await firstValueFrom(this.translate.get('teamplayer.message_1'));
+
+  this.testimonies[1].message =
+    await firstValueFrom(this.translate.get('teamplayer.message_2'));
+
+  this.testimonies[2].message =
+    await firstValueFrom(this.translate.get('teamplayer.message_3'));
+}
 
   activeIndex = 0;
 

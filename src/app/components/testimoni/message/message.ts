@@ -8,8 +8,8 @@ import { Component, input } from '@angular/core';
 })
 export class Message {
   
-  message = input<string>();
-  developerName = input<string>();
-  projectName = input<string>();
+  message = input.required<string>();
+  developerName = input.required<string>();
+  projectName = input.required<string>();
 
 }

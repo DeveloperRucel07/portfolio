@@ -15,10 +15,17 @@ export class Socials {
     this.translate.use(lang);
     localStorage.setItem('language', lang);
   }
+  saved = localStorage.getItem('language') || 'de';
 
   constructor(){
-
+    this.checkLanguage();
+    this.translate.onLangChange.subscribe(() => {
+        this.checkLanguage();
+    });
   }
 
+  checkLanguage(){
+    this.saved = localStorage.getItem('language') || 'de';
+  }
 
 }

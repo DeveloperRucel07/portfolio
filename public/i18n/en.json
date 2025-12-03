@@ -34,11 +34,21 @@
     },
     "contact":{
         "contact":"Contact me",
+        "start":"Let's work together",
         "about_position": "I’m open to new opportunities as a frontend developer and eager to contribute to well-designed, high-quality projects. If you’re looking for someone who values clean code and strong collaboration, feel free to reach out.",
         "privacy_start": "I've read ",
         "privacy_p" : "and agree to the processing of my data as outlined.",
         "privacy_link": "privacy policy",
-        "send_success": "Thank you for your Message, We have received your email."
+        "send_success": "Thank you for your Message, We have received your email.",
+        "error":{
+            "name":"Your name could be like 'Max Mustermann'",
+            "email":{
+                "required":"Your email address must be provided.",
+                "email":"Your email address could be like 'max.mustermann@gmx.de'"
+            },
+            "message":"Your message is too short to be considered.",
+            "agree":"Please accept the privacy policy."
+        }
     },
     "footer":{
         "role": "Frontend Developer",

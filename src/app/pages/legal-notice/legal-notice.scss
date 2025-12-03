@@ -91,6 +91,9 @@
                 a{
                     text-decoration: none;
                     color: $white;
+                    &:hover {
+                        color: $primary;
+                    }
                 }
 
             }
@@ -108,6 +111,9 @@
                     text-decoration: none;
                     color:$white;
                     cursor: pointer;
+                    &:hover {
+                        color: $primary;
+                    }
                 }
             }
         }

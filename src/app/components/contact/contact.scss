@@ -162,6 +162,7 @@
                     border-radius: 60px;
                     border: none;
                     outline: none;
+                    cursor: pointer;
                 }
                 .desabled{
                     background-color: $secondary;
@@ -170,6 +171,7 @@
                     font-size: 20px;
                     color: $white;
                     background-color: $primary;
+                    
                 }
             } 
         }
@@ -289,6 +291,11 @@
                 align-items: flex-end;
                 justify-content: space-evenly;
                 gap: 50px;
+                .top{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
 
                 p, h4{
                     text-align: end;

@@ -11,21 +11,18 @@ export class Header {
   menuOpen = false;
 
   private translate = inject(TranslateService);
-  
   changeLanguage(lang: 'en' | 'de') {
     this.translate.use(lang);
     localStorage.setItem('language', lang);
   }
 
-  saved = localStorage.getItem('language');
-
-  
+  saved = localStorage.getItem('language') || 'de';
 
   
   constructor(){
     this.translate.addLangs(['en', 'de']);
-
     this.translate.use(this.saved || 'en');
+    
   }
 
   toggleMenu() {
