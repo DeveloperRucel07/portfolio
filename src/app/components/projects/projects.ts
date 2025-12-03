@@ -1,42 +1,48 @@
-import { Component, ElementRef, EventEmitter, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, inject, ViewChild } from '@angular/core';
 import { Button } from "../button/button";
 import { ProjectCard } from "./project-card/project-card";
 import { Project } from '../../project.interface';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
-  imports: [Button, ProjectCard],
+  imports: [Button, ProjectCard, TranslatePipe],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
 export class Projects {
+  private translate = inject(TranslateService)
   expandedCardIndex: number  = 0;
   projects: Project[] = [
     {
+      id:"description_join",
       projectName: 'Projekt Join',
-      aboutProject: 'Aufgabenmanagement inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren. Benutzer und Kategorien zuweisen.',
+      aboutProject: '',
       usedTechno: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-      earnedSkills: ['Direkte Anwendung der erworbenen Kenntnisse in JavaScript, HTML und CSS. Einblick in die professionelle Teamarbeit mit Scrum und Tools wie Git und Figma.' ],
+      earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
     }, 
 
     {
+      id:"description_sharkie",
       projectName: 'Projekt Sharkie',
-      aboutProject: 'Ein einfaches Jump-and-Run-Spiel, basierend auf objektorientierter Programmierung. Hilf Sharkie, die Münzen und Giftflaschen zu finden, um den Killerwal zu bekämpfen und den Ozean zu schützen.',
+      aboutProject: '',
       usedTechno: ['OOP', 'JavaScript', 'HTML', 'CSS'],
-      earnedSkills: ['Vertiefung meiner JavaScript-Kenntnisse. Erlernen und Anwenden objektorientierter Programmierung (OOP) unter Verwendung von Browserereignissen.'],
+      earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
       projectLink: 'https://sharkie.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_sharkie.png'
     },
 
     {
+      id:"description_shopdev",
       projectName: 'Projekt ShopDev',
-      aboutProject: 'Eine vollständige E-Commerce-Website mit funktionalem Warenkorb, Wunschliste und Benutzerauthentifizierungssystem. Zahlungsabwicklung per Karte und PayPal.',
+      aboutProject: '',
       usedTechno: ['Angular','Material Design', 'Tailwind CSS', 'HTML', 'SCSS'],
-      earnedSkills: ['Vertiefung meine Angular-Kenntnisse,die nutzunf von Interface und typisierung in angular. implementierung von responsive Design mit Tailwins CSS. '],
+      earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/shopdev',
       projectLink: 'https://shopdev.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_shopdev.png'
@@ -54,9 +60,21 @@ export class Projects {
 
   @ViewChild('projectList', {static: false}) projectList!: ElementRef<HTMLDivElement>;
   activeIndex = 0;
-  constructor() {}
+  constructor() {
+    this.loadTranslationsForProjects();
+    this.translate.onLangChange.subscribe(() => {
+      this.loadTranslationsForProjects();
+    });
+  }
 
-    ngAfterViewInit() {
+  private async loadTranslationsForProjects() {
+    for (const p of this.projects) {
+      p.aboutProject = await firstValueFrom(this.translate.get(`projects.${p.id}.about`));
+      p.earnedSkills = await firstValueFrom(this.translate.get(`projects.${p.id}.know_how`));
+    }
+  }
+
+  ngAfterViewInit() {
     const el = this.projectList?.nativeElement;
     if(!el){
       return

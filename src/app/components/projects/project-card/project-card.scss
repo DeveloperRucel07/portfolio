@@ -146,7 +146,7 @@
     }    
 }
 
-@media(min-width: 801px){
+@media(min-width: 965px){
     .project-card{
         position: relative;
         @include displayFlex($fd:column, $jc:start);
@@ -206,7 +206,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 965px) {
 
     .project-card{
         @include displayFlex($fd:column, $jc:start);

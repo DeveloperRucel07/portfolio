@@ -7,14 +7,14 @@
     <div class='project-detail'>
         <div class="detail-text">
             <li class="about">
-                Über das Projekt:
+                {{'projects.about' | translate }}
                 <p>
                     {{aboutProject()}}
                 </p>
 
             </li>
             <li class="used-techno">
-                Technologien, die ich verwendet habe:
+                {{'projects.technologies' | translate }}
                 <p>
                     @for(techno of usedTechno(); track techno; let last = $last){
                         {{techno }} @if (!last) { | }
@@ -23,11 +23,9 @@
 
             </li>
             <li>
-                Erworbenen Kenntnisse:
+                {{'projects.new_skills' | translate }}
                 <p>
-                    @for(skill of earnedSkills(); track skill; let last = $last){
-                        {{skill}} @if (!last) { | }
-                    }
+                    {{earnedSkills()}}
                 </p>
             
             </li>
@@ -45,9 +43,9 @@
     
     <div class="expand-indicator"  (click)="onCardClick()">
         @if (isExpanded()) {
-            <span>Weniger anzeigen ▲</span>
+            <span>{{'projects.less' | translate }} ▲</span>
         } @else {
-            <span>Mehr anzeigen ▼</span>
+            <span>{{'projects.more' | translate }} ▼</span>
         }
     </div>
 </div>

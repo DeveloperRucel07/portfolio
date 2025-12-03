@@ -21,9 +21,26 @@
         "contact":"Contact me"
     },
     "projects":{
-        "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-        "description_sharkie": "A simple jump-and-run game based on object-oriented programming. Help Sharkie find the coins and poison bottles to fight the killer whale and protect the ocean.",
-        "description_shopdev": "A complete e-commerce store with authentication, real-time database, and secure payment integration."
+        "title":"My Projects",
+        "about":"About the project:",
+        "technologies":"Technologies used:",
+        "new_skills":"Acquired knowledge:",
+        "more":"Show more",
+        "less":"Show less",
+        "description_join":{
+            "about":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            "know_how":"Direct application of JavaScript and BAAS such as Firebase, HTML, and CSS. Insight into professional teamwork with Scrum and tools like Git and Figma."
+        },
+        "description_sharkie":{
+            "about":"A simple jump-and-run game based on object-oriented programming. Help Sharkie find the coins and poison bottles to fight the killer whale and protect the ocean.",
+            "know_how":"Deepening my JavaScript knowledge. Learning and applying object-oriented programming (OOP) using browser events."
+        },
+         
+        "description_shopdev": {
+            "about":"A complete e-commerce store with authentication, real-time database, and secure payment integration.",
+            "know_how":"Deepening my Angular knowledge, the use of Rxjs, Signals and Store, the use of interfaces and typing in Angular. Implementation of responsive design with Tailwin's CSS."
+        }
+        
     },
     "teamplayer":{
         "need":"Need a teamplayer?",

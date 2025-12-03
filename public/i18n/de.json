@@ -21,12 +21,25 @@
         "contact":"Kontaktieren"
     },
     "projects":{
+        "title":"Meine Projekte",
         "about":"Über das Projekt:",
-        "technologies":"Technologien, die ich verwendet habe:",
+        "technologies":"Verwendete Technologien:",
         "new_skills":"Erworbenen Kenntnisse:",
-        "description_join": "Task manager, inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",
-        "description_sharkie": "Ein simples Jump-’n’-Run-Spiel, basierend auf objektorientierter Programmierung. Hilf Sharkie, die Münzen und Giftflaschen zu finden, um den Killerwal zu bekämpfen und den Ozean zu schützen.",
-        "description_shopdev": "Ein vollständiger E-Commerce-Shop mit Authentifizierung, Echtzeitdatenbank und sicherer Zahlungsabwicklung."
+        "more":"Mehr anzeigen",
+        "less":"Weniger anzeigen",
+        "description_join":{
+            "about":"Task manager, inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",
+            "know_how":"Direkte Anwendung von JavaScript und BAAS wie Firebase, HTML und CSS. Einblick in die professionelle Teamarbeit mit Scrum und Tools wie Git und Figma."
+        },
+        "description_sharkie":{
+            "about":"Ein simples Jump-’n’-Run-Spiel, basierend auf objektorientierter Programmierung. Hilf Sharkie, die Münzen und Giftflaschen zu finden, um den Killerwal zu bekämpfen und den Ozean zu schützen.",
+            "know_how":"Vertiefung meiner JavaScript-Kenntnisse. Erlernen und Anwenden objektorientierter Programmierung (OOP) unter Verwendung von Browserereignissen."
+        },
+         
+        "description_shopdev": {
+            "about":"Ein vollständiger E-Commerce-Shop mit Authentifizierung, Echtzeitdatenbank und sicherer Zahlungsabwicklung.",
+            "know_how":"Vertiefung meine Angular-Kenntnisse, die nutzung von Rxjs, Signals und Store, die nutzunf von Interface und typisierung in angular. implementierung von responsive Design mit Tailwins CSS."
+        }
     },
     "teamplayer":{
         "need":"Sie brauchen einen Teamplayer?",
