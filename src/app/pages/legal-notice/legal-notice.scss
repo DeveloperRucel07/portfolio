@@ -237,9 +237,13 @@
        
     } 
     .footer{
-        width: 100% !important;
+        width: 100vw !important;
         height: 100px !important;
         background-color: $primary;
+    }
+
+    .social-links{
+        display: none !important;
     }
 
     .contact-info{

@@ -107,7 +107,6 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             padding: 10px;
-            margin-right: 20px;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
             width: 100vw;
@@ -115,7 +114,7 @@
                 flex: 0 0 calc(100vw - 30px);
                 scroll-snap-align: start;
                 box-sizing: border-box;
-                padding: 10px;
+                padding: 12px;
                 text-align: center;
             }
         }

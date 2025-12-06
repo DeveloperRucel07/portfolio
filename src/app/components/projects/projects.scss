@@ -159,6 +159,14 @@
 
 
 @media (max-width: 965px) {
+    .project-list{
+        @include displayFlex($jc:center,$fd:column);
+        margin-left: 20px !important;  
+
+        .dots-content{
+            display: none !important;
+        }
+    }
 
     .dots-content{
         display: none !important;
