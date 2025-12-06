@@ -4,7 +4,6 @@
 .main-content{
   position: relative;
   @include displayFlex($jc:center, $fd:column);
-  margin-left: 130px;
   gap: 20px;
   scroll-behavior: smooth;
   >*{
@@ -71,7 +70,7 @@
     overflow: hidden;
   }
   .main-content{
-    margin-left: 0px;
+    margin-left: 50px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -115,20 +114,22 @@
 
 @media(min-width: 1501px){
   .main-content{
-    margin-left: 80px;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     align-items: flex-start;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    align-items: stretch;
     width: 100vw;
     height: 100vh;
     >*{
-      flex: 0 0 100vw;
+      width: 100vw;
       height: 100vh;
+      scroll-snap-align: start;
     }
 
   }
