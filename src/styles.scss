@@ -28,44 +28,17 @@ body{
   @include displayFlex($jc:center, $fd:column);
   background-color: $bg_color;
   color: $secondary;
-  overflow-x: hidden !important;
 }
-
-.main-content{
-  position: relative;
-  @include displayFlex($jc:center, $fd:column);
-  gap: 20px;
-  scroll-behavior: smooth;
-  >*{
-      width: 100vw;              
-  }
-}
-
-
 
 
 
 @media (max-width: 965px) {
   body{
     height: auto;
-    width: 100vw;
-    overflow-x: hidden;
     overflow-y: auto;
     display: flex;
+    align-items: center;
     flex-direction: column !important;
-  }
-
-  .main-content{
-    margin-left: 0px;
-    padding: 0;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column !important;
-    scroll-behavior: smooth;
-    >*{
-      width: 100%;                
-    }  
   }
 
   .next-section{
@@ -74,68 +47,5 @@ body{
   
 }
 
-@media (max-width: 480px) {
-    .title{
-        margin-left: 10px;
-        z-index: 1;
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        color: $primary;
-        font-weight: 700;
-        font-size: 1.5rem;
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        color: transparent;
-        line-height: 1;
-        -webkit-text-stroke: 1px $primary;
-    }
-}
 
-@media(min-width: 966px) and (max-width: 1500px){
-  body{
-    overflow: hidden;
-  }
-  .main-content{
-    margin-left: 80px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    width: 100vw;
-    height: 100vh;
 
-    .footer{
-      background-color: $primary;
-    }
-
-  }
-}
-
-@media(min-width: 1501px){
-  body{
-    overflow: hidden;
-  }
-  .main-content{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: flex-start;
-    overflow-x: scroll;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    width: 100vw;
-    height: 100vh;
-
-    .footer{
-      background-color: $primary;
-    }
-
-  }
-
-}

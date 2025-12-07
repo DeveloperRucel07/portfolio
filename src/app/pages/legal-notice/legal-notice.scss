@@ -10,6 +10,12 @@
         font-weight: 600;
         color: $primary;
     }
+
+    ul{
+        li{
+            list-style: none;
+        }
+    }
     
     .mail-link{
         color: $white;
@@ -129,6 +135,9 @@
 
 
 @media (min-width: 965px) and (max-width: 1500px) {
+    .legal-notice{
+        padding: 10px;
+    }
     .footer{
         display: none !important;
     }
@@ -212,6 +221,7 @@
         align-items: flex-start;
         margin-left: 0 !important;
         margin: 0;
+        overflow-x: hidden;
         padding-top: 100px !important;
         .title{
             @include titleMobile();

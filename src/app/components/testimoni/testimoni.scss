@@ -11,7 +11,7 @@
     gap: 20px;
     font-size: 2rem;
     height: auto;
-    padding: 100px 0 50px 0;
+    padding: 100px 10px 50px 10px;
     margin-bottom: 30px;
 
     .title{
@@ -92,26 +92,25 @@
 
 @media (max-width: 965px){
     .testimoni{
-        padding: 30px;
+        width: 95vw;
         align-items: center;
-
         .title{
             width: 100%;
-            text-align: start !important;
+            text-align: center !important;
         }
         .message-list{
             @include displayFlex($jc:flex-start,$fd:row);
             align-items: center;
             gap: 10px;
-            overflow-x: auto;
+            overflow-x: hidden;
             scroll-behavior: smooth;
             padding: 10px;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
-            width: 100vw;
+            width: 100%;
             .message{
-                flex: 0 0 calc(100vw - 30px);
-                scroll-snap-align: start;
+                flex: 0 0 calc(100vw - 20px);
+                scroll-snap-align: center;
                 box-sizing: border-box;
                 padding: 12px;
                 text-align: center;

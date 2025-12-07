@@ -6,9 +6,6 @@
   @include displayFlex($jc:center, $fd:column);
   gap: 20px;
   scroll-behavior: smooth;
-  >*{
-      width: 100%;                
-  }
 }
 
 
@@ -18,36 +15,36 @@
   .main-content{
     margin-left: 0px;
     padding: 0;
+    margin: 0;
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-direction: column !important;
     scroll-behavior: smooth;
-    overflow-x: hidden !important;
-    >*{
-        width: 100%;               
-    }
       
   }
+
+   app-footer{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
 
   app-socials{
     display: none;
   }
 
-  app-footer{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
 
   .next-section{
     display: none;
   }
 
 
-    ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 10px;
     display: none;
   }
@@ -71,28 +68,8 @@
   
 }
 
-@media (max-width: 480px) {
-    .title{
-        margin-left: 10px;
-        z-index: 1;
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        color: $primary;
-        font-weight: 700;
-        font-size: 1.5rem;
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        color: transparent;
-        line-height: 1;
-        -webkit-text-stroke: 1px $primary;
-    }
-}
 
 @media(min-width: 965px) and (max-width: 1500px){
-  body{
-    overflow: hidden;
-  }
   .main-content{
     margin-left: 50px;
     display: flex;
@@ -103,7 +80,7 @@
     overflow-y: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    width: 100vw;
+    width: calc(100vw - 50px);
     height: 100vh;
 
     .footer{

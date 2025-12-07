@@ -2,7 +2,7 @@
 @import '../../../scss/_mixins.scss';
 
 .sucess-message{
-    width: 310px;
+    width: 300px;
     display: none;
     align-items: center;
     justify-content: center;
@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    padding: 100px 0 50px 0;
+    padding: 100px 10px 50px 10px;
     .title{
         @include titleMobile;
     }
@@ -357,15 +357,17 @@
 @media (max-width: 965px) {
     .contact{  
         @include displayFlex($fd:column);
-        align-items: flex-start ;
-        width: 100vw !important;
-        height: auto !important;
+        align-items: center;
+        width: 95vw ;
+        height: auto;
         .content{
             @include displayFlex($fd:column-reverse);
+            align-items: center;
             gap: 20px;
             width: 100%;
             form{
                 width: 100%;
+                padding: 10px;
                 input[type=text], input[type=email], textarea{
                     width: 100%;
                     margin: 10px 0;
@@ -414,6 +416,10 @@
             margin: 0;
         }
         .local-footer{
+            width: 100%;
+            .footer{
+                display: none !important;
+            }
             display: none !important;
         }
     }

@@ -128,8 +128,8 @@
         left: 0;
         right: 0;
         height: 100px;
-        width: 100%;
-        z-index: 1000;
+        width: 100vw;
+        z-index: 10;
         img{
             width: 60px;
             height: 60px;
@@ -162,7 +162,7 @@
                     font-weight: 500;
                     font-size: 18px;
                     transform: rotate(0deg);
-                    transition: color 150ms ease, transform 150ms ease;
+                    transition: color 120ms ease, transform 150ms ease;
                     flex-wrap: nowrap;
                 } 
             }
@@ -171,7 +171,7 @@
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 965px){
     .burger{
         display: flex;
     }

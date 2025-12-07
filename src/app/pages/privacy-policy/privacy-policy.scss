@@ -3,13 +3,19 @@
 .privacy-policy{
     margin-left: 140px !important;
     color: $white;
-    width: 100vw;
+    width: calc(100vw - 140px);
     height: 100vh;
     scroll-behavior: smooth;
     h3{
         font-size: 24px;
         font-weight: 600;
         color: $primary;
+    }
+
+    ul{
+        li{
+            list-style: none;
+        }
     }
 
     .mail-link{
@@ -23,8 +29,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        overflow-x: auto;
-        width: 100vw;
+        overflow-x: hidden;
         
         .title{
             @include title();
@@ -105,6 +110,7 @@
     .privacy-policy{
         overflow-y: auto;
         width: calc(100vw - 150px);
+        padding: 10px;
     }
 
     .up-start{
@@ -123,7 +129,6 @@
         align-items: flex-end;
         justify-content: flex-start;
         gap: 50px;
-        width: 100%;
         margin-right: 10px;
         padding: 10px;
 
@@ -192,6 +197,8 @@
         align-items: flex-start;
         margin-left: 0 !important;
         margin: 0;
+        width: 100vw !important;
+        overflow-x: hidden;
         padding-top: 100px !important;
 
         .title{

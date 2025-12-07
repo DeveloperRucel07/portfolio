@@ -113,7 +113,7 @@
 
         .location{
             position: absolute;
-            width: 100%;
+            width: 90%;
             font-size: 18px;
             display: flex;
             align-items: center;
@@ -131,7 +131,7 @@
             
             .function{
                 position: absolute;
-                width: 100%;
+                width: 90%;
                 bottom: 15%;
                 @include displayFlex($jc:center, $fd:column-reverse);
                 align-items: center !important;

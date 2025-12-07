@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     font-size: 2rem;
     height: auto;
@@ -159,14 +159,19 @@
 
 
 @media (max-width: 965px) {
+    .projects{
+        width: 95vw;
+    }
     .project-list{
         @include displayFlex($jc:center,$fd:column);
-        margin-left: 20px !important;  
+        margin-left: 0 !important;  
+        overflow-x: hidden;
 
         .dots-content{
             display: none !important;
         }
     }
+
 
     .dots-content{
         display: none !important;
