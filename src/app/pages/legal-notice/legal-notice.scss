@@ -45,7 +45,7 @@
         .end-legal{
             display: flex;
             position: absolute;
-            right: 0;
+            right: 100px;
             .next-notice-right{
                 padding: 10px;
                 display: flex;
@@ -60,6 +60,13 @@
             position: absolute;
             top: 50%;
             right: 10%;
+        }
+
+        .footer{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
         }
 
     }

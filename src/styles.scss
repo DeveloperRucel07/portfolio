@@ -28,7 +28,7 @@ body{
   @include displayFlex($jc:center, $fd:column);
   background-color: $bg_color;
   color: $secondary;
-  
+  overflow-x: hidden !important;
 }
 
 .main-content{

@@ -93,6 +93,13 @@
     }
 }
 
+
+@media (max-width: 600px){
+    .title{
+        font-size: 32px !important;
+    }
+}
+
 @media(min-width: 965px) and (max-width: 1500px){
   .skills{
       position: relative;

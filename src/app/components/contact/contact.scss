@@ -354,61 +354,12 @@
 
 }
 
-
-@media (min-width: 965px) and (max-width: 1500px){
-    .contact{  
-        @include displayFlex($fd:column);
-        align-items: flex-start ;
-        width: 100vw;
-        padding: 0 !important;
-        .content{
-            @include displayFlex($fd:column-reverse);
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 20px;
-            width: 100%;
-            form{
-                width: 100%;
-                input[type=text], input[type=email], textarea{
-                    width: 100%;
-                    margin: 10px 0;
-                }
-            }
-            .contact-info{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0px;
-                .top{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center !important;
-                    gap: 20px;
-                    p{
-                        width: 80%;
-                        text-align: center !important;
-                        padding: 10px;
-                    }
-                }
-                .link{
-                    align-items: flex-start !important;
-                }
-            }
-        }
-    }
-    .footer{
-        display: none !important;
-    }
-}
-
 @media (max-width: 965px) {
     .contact{  
         @include displayFlex($fd:column);
         align-items: flex-start ;
         width: 100vw !important;
-        padding: 400px 20px 0 20px;
-        margin-top: 100px;
+        height: auto !important;
         .content{
             @include displayFlex($fd:column-reverse);
             gap: 20px;

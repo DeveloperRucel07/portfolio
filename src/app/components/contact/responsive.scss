@@ -33,12 +33,40 @@
             padding: 30px;
         }
 
+       
+
         .content{
             display: flex;
             flex-direction: column-reverse;
             justify-content: start;
             align-items: center;
             align-content: center;
+            .contact-info{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0px;
+                .top{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center !important;
+                    gap: 20px;
+                    .position{
+                        width: 75%;
+                        text-align: center !important;
+                    }
+                    p{
+                        width: 100%;
+                        text-align: center !important;
+                        padding: 10px;
+                    }
+                }
+                .link{
+                    align-items: flex-start !important;
+                }
+            }
+
             .contact-info{
                 gap: 50px;
                 .top{
@@ -106,4 +134,12 @@
 
     }
 
+}
+
+
+
+@media (max-width: 600px){
+    .title{
+        font-size: 32px !important;
+    }
 }

@@ -23,8 +23,9 @@
     justify-content: flex-start;
     flex-direction: column !important;
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
     >*{
-        width: 100%;                
+        width: 100%;               
     }
       
   }
@@ -35,13 +36,36 @@
 
   app-footer{
     position: absolute;
-    top: 109%;
+    top: 100%;
     left: 0;
     right: 0;
     z-index: 1000;
   }
 
   .next-section{
+    display: none;
+  }
+
+
+    ::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccff00;
+    border-radius: 10px;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff4d;
     display: none;
   }
   
