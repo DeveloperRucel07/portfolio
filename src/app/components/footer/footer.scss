@@ -29,15 +29,13 @@
 
 @media(min-width: 965px) and (max-width: 1500px){
     .footer{
-        width: 100vw;
+        width: calc(100vw - 70px);
         height: 100px;
         padding-top: 10px;
         display: flex;
         flex-direction: row;
         background-color: transparent;
-        padding: 10px 30px;
-        padding-left: 170px;
-        padding-right: 100px;
+        
         justify-content: flex-end;
         align-items: center !important;
         .logo{
@@ -56,6 +54,7 @@
             align-items: center;
             gap: 20px;
             height: 100%;
+            padding-right: 30px;
             padding-top: 10px;
             p{
                 text-align: end;

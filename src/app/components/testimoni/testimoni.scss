@@ -21,14 +21,13 @@
     .message-list{
         @include displayFlex($jc:center,$fd:column);
         align-items: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .dots-content{
-        width: 100%;
+
         display: none;
     }
-
 
     .next-section{
         top: 25%;
@@ -42,11 +41,10 @@
         justify-content: start !important;
         flex-direction: column;
         align-items: center;
-        padding-left: 150px;
-        padding-right: 50px;
-        width: 100vw;
+        width: calc(100vw - 70px);
+        margin-left: 60px;
+        padding: 100px 0 50px 0;
         scroll-snap-align: start;
-        overflow-y: hidden;
 
         .title{
             @include titleMobile()
@@ -62,6 +60,7 @@
 
 @media(min-width: 1501px){
     .testimoni{
+        padding: 0 150px;
         position: relative;
         @include displayCenter();
         flex-direction: row;
@@ -70,13 +69,12 @@
         width: 100vw;
         height: 100vh;
         scroll-snap-align: start;
-        overflow-y: hidden;
 
         .title{
             position: absolute;
             @include title();
             bottom: 5%;
-            left: 60px;
+            left: 70px;
         }
 
         .next-section{

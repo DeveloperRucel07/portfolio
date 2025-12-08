@@ -78,17 +78,17 @@
         justify-content: start !important;
         align-items: center;
         flex-direction: column;
-        padding-left: 150px;
-        padding-right: 100px;
-        width: 100vw;
+        width: calc(100vw - 70px);
+        margin-left: 60px;
+        padding: 100px 0 50px 0;
         scroll-snap-align: start;
-        overflow-y: hidden;
         .title{
             @include titleMobile();
         }
 
         .my-history{
             font-size: 24px;
+            max-width: 700px;
         }
 
         .next-section{
@@ -103,18 +103,15 @@
         position: relative;
         @include displayCenter();
         flex-direction: column;
-        padding-left: 150px;
-        padding-right: 150px;
+        padding: 0 150px;
         width: 100vw;
         height: 100vh;
         scroll-snap-align: start;
-        overflow-y: hidden;
-        overflow-X: hidden;
 
         .title{
             @include title();
             left: 100px;
-            top: 350px;
+            top: 400px;
         }
 
         .my-history{

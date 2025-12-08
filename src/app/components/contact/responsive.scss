@@ -9,10 +9,10 @@
         justify-content: start !important;
         align-items: center !important;
         flex-direction: column !important;
-        padding-left:150px;
+        padding: 30px 0;
         padding-top: 50px;
-        padding-bottom: 0;
-        width: 100vw;
+        width: calc(100vw - 70px);
+        margin-left: 60px;
         height: auto;
         scroll-snap-align: start;
         overflow-y: hidden;
@@ -32,8 +32,6 @@
         form{
             padding: 30px;
         }
-
-       
 
         .content{
             display: flex;

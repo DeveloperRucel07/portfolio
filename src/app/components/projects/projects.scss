@@ -17,8 +17,6 @@
 
     .project-list{
         @include displayFlex($jc:center,$fd:column);
-        margin-left: 25px;  
-
         .dots-content{
             display: none !important;
         }
@@ -42,10 +40,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-left: 100px;
-        padding-right: 70px;
-        width: 100vw;
-        scroll-snap-align: start;
+        width: calc(100vw - 70px);
+        margin-left: 60px;
 
         .title{
             @include titleMobile();
@@ -70,8 +66,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        padding-left: 150px;
-        padding-right: 50px;
+        padding: 0 20px 0 150px ;
         width: 100vw;
         height: 100vh;
         scroll-snap-align: start;
@@ -103,6 +98,7 @@
         .next-section{
             display: block;
             position: absolute;
+            height: 30px;
             top: 10%;
             right: 5%;
             z-index: 2;
@@ -165,7 +161,6 @@
     .project-list{
         @include displayFlex($jc:center,$fd:column);
         margin-left: 0 !important;  
-        overflow-x: hidden;
 
         .dots-content{
             display: none !important;

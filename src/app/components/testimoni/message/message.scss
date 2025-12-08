@@ -76,7 +76,7 @@
     .message{
         @include displayFlex($fd:column);
         align-items: center;
-
+        height: 310px;
         .separator{
             width: 100%;
             height: 1px;

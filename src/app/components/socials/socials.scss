@@ -12,8 +12,7 @@
     .linkedin{
         &:hover{
             img{
-                background: transparent;
-                content: url('https://rucel-tsafack.com/assets_icons/linkedin_hover.png');
+                background: $primary;
                 -webkit-box-shadow: 0px 0px 31px 10px #B5E93B; 
                 box-shadow: 0px 0px 31px 10px #B5E93B;
                 border-radius: 50%;
@@ -28,8 +27,7 @@
     .github{
         &:hover{
             img{
-                background: transparent;
-                content: url('https://rucel-tsafack.com/assets_icons/github_hover.png');
+                background: $primary;
                 -webkit-box-shadow: 0px 0px 31px 10px #B5E93B; 
                 box-shadow: 0px 0px 31px 10px #B5E93B;
                 border-radius: 50%;
@@ -41,8 +39,7 @@
     .email{
         &:hover{
             img{
-                background: transparent;
-                content: url('https://rucel-tsafack.com/assets_icons/email_hover.png');
+                background: $primary;
                 -webkit-box-shadow: 0px 0px 31px 10px #B5E93B; 
                 box-shadow: 0px 0px 31px 10px #B5E93B;
                 border-radius: 50%;

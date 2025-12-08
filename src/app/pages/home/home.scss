@@ -45,25 +45,21 @@
 
 
   ::-webkit-scrollbar {
-    width: 10px;
-    display: none;
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
     background: #222;
     border-radius: 10px;
-    display: none;
   }
 
   ::-webkit-scrollbar-thumb {
     background: #ccff00;
     border-radius: 10px;
-    display: none;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: #e6ff4d;
-    display: none;
   }
   
 }
@@ -71,16 +67,15 @@
 
 @media(min-width: 965px) and (max-width: 1500px){
   .main-content{
-    margin-left: 50px;
+    // margin-left: 50px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
-    overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    width: calc(100vw - 50px);
+    // width: calc(100vw - 50px);
     height: 100vh;
 
     .footer{
@@ -90,25 +85,22 @@
   }
 
    ::-webkit-scrollbar {
-    width: 10px;
-    display: none;
+    width: 4px;
+    height: 5px;
   }
 
   ::-webkit-scrollbar-track {
     background: #222;
     border-radius: 10px;
-    display: none;
   }
 
   ::-webkit-scrollbar-thumb {
     background: #ccff00;
     border-radius: 10px;
-    display: none;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: #e6ff4d;
-    display: none;
   }
 }
 
@@ -120,7 +112,6 @@
     flex-direction: row;
     align-items: flex-start;
     overflow-x: auto;
-    overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
@@ -140,25 +131,22 @@
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    display: none;
+    width: 4px;
+    height: 5px;
   }
 
   ::-webkit-scrollbar-track {
     background: #222;
     border-radius: 10px;
-    display: none;
   }
 
   ::-webkit-scrollbar-thumb {
     background: #ccff00;
     border-radius: 10px;
-    display: none;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: #e6ff4d;
-    display: none;
   }
 
 }
