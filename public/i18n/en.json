@@ -11,7 +11,7 @@
     },
     "whyme":{
         "whyme": "Why me",
-         "skillset": "I develop digital interfaces that are both technically precise and esthetically sophisticated. My focus is on creating frontends that are intuitive, fast, and accessible to all users. I always work in a structured and detail-oriented manner, aiming to produce durable, high-quality products.",
+        "skillset": "I craft high-performance digital interfaces backed by secure, scalable architecture. While my focus remains on creating intuitive and accessible frontends, I bring a deep commitment to backend integrity:implementing secure APIs, rate limiting, and complex permission systems. I work in a structured, detail-oriented manner to produce durable products where user experience and data security are equally prioritized.",
         "aboutme": "As a frontend developer, I bring clean, efficient code, a strong eye for user experience, and a genuinely collaborative mindset. I care about building interfaces that feel intuitive and look polished, and I’m committed to delivering high-quality work with reliability and professionalism. I’m motivated, detail-oriented, and always ready to contribute to new projects",
         "new_skill":"I am always happy to learn new technologies,just tell me which technology should i need to know for our future Project.",
         "me": "I am",
@@ -39,6 +39,10 @@
         "description_shopdev": {
             "about":"A complete e-commerce store with authentication, real-time database, and secure payment integration.",
             "know_how":"Deepening my Angular knowledge, the use of Rxjs, Signals and Store, the use of interfaces and typing in Angular. Implementation of responsive design with Tailwin's CSS."
+        },
+        "description_coderr": {
+            "about": "Full-stack freelance marketplace featuring gig management, category search, and dashboard controls.",
+            "know_how": "Deepening my expertise in secure API architecture, rate limiting, and role-based authorization logic."
         }
         
     },

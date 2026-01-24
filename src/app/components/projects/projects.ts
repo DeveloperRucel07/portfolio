@@ -19,7 +19,7 @@ export class Projects {
       id:"description_join",
       projectName: 'Projekt Join',
       aboutProject: '',
-      usedTechno: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
+      usedTechno: ['SCRUM', 'Git', 'GitHub', 'JavaScript', 'Firebase', 'HTML', 'CSS'],
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.com/index.html',
@@ -46,6 +46,16 @@ export class Projects {
       githubLink: 'https://github.com/DeveloperRucel07/shopdev',
       projectLink: 'https://shopdev.rucel-tsafack.com/index.html',
       projectImage: 'https://rucel-tsafack.com/assets_icons/project_shopdev.png'
+    }, 
+    {
+      id:"description_coderr",
+      projectName: 'Projekt Coderr',
+      aboutProject: '',
+      usedTechno: ['Python','Django', 'DRF', 'Google Cloud', 'Linux','SQL','Database' ,'HTML', 'CSS', 'JavaScript'],
+      earnedSkills: '',
+      githubLink: 'https://github.com/DeveloperRucel07/coderr',
+      projectLink: 'https://coderr.rucel-tsafack.com/index.html',
+      projectImage: 'https://rucel-tsafack.com/assets_icons/project_coderr.png'
     }, 
 
   ]

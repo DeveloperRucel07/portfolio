@@ -11,7 +11,7 @@
     },
     "whyme":{
         "whyme": "Warum ich",
-        "skillset": "Ich entwickle digitale Interfaces, die sowohl technisch präzise als auch gestalterisch durchdacht sind. Mein Fokus liegt darauf, Frontends zu schaffen, die intuitiv, schnell und für alle Nutzer zugänglich sind. Dabei arbeite ich stets strukturiert, detailorientiert und mit dem Ziel, langlebige und hochwertige Produkte zu realisieren.",
+        "skillset": "Ich entwickle barrierefreie Frontends auf Basis sicherer, skalierbarer Architekturen. Mit Fokus auf sichere APIs, Berechtigungssysteme und Rate Limiting schaffe ich langlebige digitale Lösungen, die Benutzerfreundlichkeit und Datensicherheit technisch präzise vereinen.",
         "aboutme": "Als Frontend-Entwickler schreibe ich sauberen, effizienten Code. Ich habe ein ausgeprägtes Gespür für Benutzerfreundlichkeit und eine ausgeprägte Teamorientierung. Mir ist es wichtig, intuitive und ansprechende Benutzeroberflächen zu entwickeln, und ich liefere stets qualitativ hochwertige Arbeit zuverlässig und professionell. Ich bin motiviert, detailorientiert und freue mich immer darauf, mich in neue Projekte einzubringen.",
         "new_skill":"Ich lerne immer gerne neue Technologien kennen. Sagen Sie mir einfach, welche Technologien ich für unser zukünftiges Projekt beherrschen sollte.",
         "me": "Ich bin",
@@ -39,6 +39,10 @@
         "description_shopdev": {
             "about":"Ein vollständiger E-Commerce-Shop mit Authentifizierung, Echtzeitdatenbank und sicherer Zahlungsabwicklung.",
             "know_how":"Vertiefung meine Angular-Kenntnisse, die nutzung von Rxjs, Signals und Store, die nutzunf von Interface und typisierung in angular. implementierung von responsive Design mit Tailwins CSS."
+        },
+        "description_coderr": {
+            "about": "Full-Stack-Marktplatz für Freelancer mit Gig-Management, Kategorien-Suche und Dashboard-Steuerung.",
+            "know_how": "Vertiefung meiner Kenntnisse in sicherer API-Architektur, Rate Limiting und rollenbasierter Berechtigungslogik."
         }
     },
     "teamplayer":{

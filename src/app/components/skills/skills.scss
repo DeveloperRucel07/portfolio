@@ -154,13 +154,17 @@
               font-size: 24px;
             }
             .technologies{
+              max-height: 240px;
+              overflow-y: scroll;
+
+                display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));;
                 gap: 20px;
                 p{
-                    width: 100px;
+                    width: 120px;
                     img{
-                        width: 50px;
-                        height: 50px;
+                        width: 55px;
+                        height: 55px;
                     }
                 }
             }
@@ -208,3 +212,23 @@
     border-color: transparent;
   }
 }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccff00;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff4d;
+  }
+  
