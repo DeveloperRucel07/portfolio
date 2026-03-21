@@ -1,6 +1,6 @@
 
 *
-
 !dist/
 !dist/portfolio/
+!dist/portfolio/browser/
 !dist/portfolio/browser/**
