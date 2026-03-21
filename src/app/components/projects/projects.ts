@@ -38,16 +38,6 @@ export class Projects {
     },
 
     {
-      id:"description_shopdev",
-      projectName: 'Projekt ShopDev',
-      aboutProject: '',
-      usedTechno: ['Angular','Material Design', 'Tailwind CSS', 'HTML', 'SCSS'],
-      earnedSkills: '',
-      githubLink: 'https://github.com/DeveloperRucel07/shopdev',
-      projectLink: 'https://shopdev.rucel-tsafack.com/index.html',
-      projectImage: 'https://rucel-tsafack.com/assets_icons/project_shopdev.png'
-    }, 
-    {
       id:"description_coderr",
       projectName: 'Projekt Coderr',
       aboutProject: '',
