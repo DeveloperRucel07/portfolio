@@ -6,7 +6,7 @@ git push
 
 ng build
 
-git ftp push \
+git ftp push --force \
   --user $FTP_USER \
   --passwd $FTP_PASSWORD \
   --syncroot dist/portfolio/browser \
