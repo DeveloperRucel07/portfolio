@@ -4,5 +4,7 @@ git push
 
 ng build
 
-git ftp push --syncroot dist/portfolio/browser
+git ftp init 
+
+git ftp push --user $FTP_USER --passwd $FTP_PASSWORD --syncroot dist/portfolio/browser  $FTP_HOST
 
