@@ -22,8 +22,8 @@ export class Projects {
       usedTechno: ['SCRUM', 'Git', 'GitHub', 'JavaScript', 'Firebase', 'HTML', 'CSS'],
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/Join',
-      projectLink: 'https://join.rucel-tsafack.com/index.html',
-      projectImage: 'https://rucel-tsafack.com/assets_icons/project_join.png'
+      projectLink: 'https://join.rucel-tsafack.de/index.html',
+      projectImage: 'https://rucel-tsafack.de/public/assets_icons/project_join.png'
     }, 
 
     {
@@ -33,8 +33,8 @@ export class Projects {
       usedTechno: ['OOP', 'JavaScript', 'HTML', 'CSS'],
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
-      projectLink: 'https://sharkie.rucel-tsafack.com/index.html',
-      projectImage: 'https://rucel-tsafack.com/assets_icons/project_sharkie.png'
+      projectLink: 'https://sharkie.rucel-tsafack.de/index.html',
+      projectImage: 'https://rucel-tsafack.de/public/assets_icons/project_sharkie.png'
     },
 
     {
@@ -44,8 +44,8 @@ export class Projects {
       usedTechno: ['Python','Django', 'DRF', 'Google Cloud', 'Linux','SQL','Database' ,'HTML', 'CSS', 'JavaScript'],
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/coderr',
-      projectLink: 'https://coderr.rucel-tsafack.com/index.html',
-      projectImage: 'https://rucel-tsafack.com/assets_icons/project_coderr.png'
+      projectLink: 'https://coderr.rucel-tsafack.de/index.html',
+      projectImage: 'https://rucel-tsafack.de/public/assets_icons/project_coderr.png'
     }, 
 
   ]
