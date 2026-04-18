@@ -29,7 +29,7 @@ export class Contact {
   http = inject(HttpClient);
 
   post = {
-    endPoint: 'https://rucel-tsafack.com/sendMail.php',
+    endPoint: 'https://rucel-tsafack.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
