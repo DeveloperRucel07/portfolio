@@ -23,7 +23,7 @@ export class Projects {
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/Join',
       projectLink: 'https://join.rucel-tsafack.de/index.html',
-      projectImage: 'https://rucel-tsafack.de/public/assets_icons/project_join.png'
+      projectImage: '/assets_icons/project_join.png'
     }, 
 
     {
@@ -34,7 +34,7 @@ export class Projects {
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/sharkie',
       projectLink: 'https://sharkie.rucel-tsafack.de/index.html',
-      projectImage: 'https://rucel-tsafack.de/public/assets_icons/project_sharkie.png'
+      projectImage: '/assets_icons/project_sharkie.png'
     },
 
     {
@@ -45,7 +45,7 @@ export class Projects {
       earnedSkills: '',
       githubLink: 'https://github.com/DeveloperRucel07/coderr',
       projectLink: 'https://coderr.rucel-tsafack.de/index.html',
-      projectImage: 'https://rucel-tsafack.de/public/assets_icons/project_coderr.png'
+      projectImage: '/assets_icons/project_coderr.png'
     }, 
 
   ]
